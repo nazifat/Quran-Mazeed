@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    
+
+}
+
+.inter-custom {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .custom-btn{
+    border: 1px solid #12D6DA ;
+    font-size: 16px;
+    padding:  28px;
+    font-weight: 100;
+   
+}
+
+.custom-btn:hover{
+    background-color: #12D6DA;
+    color: #000;
+
+}
+
+@media (max-width: 640px){
+    .custom-btn{
+        font-size: 12px;
+        padding:  10px;
+       
+    }
+
+}
+
+
+/* wave-divider css */
+
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(177% + 1.3px);
+    height: 150px;
+}
+
+.wave-divider .shape-fill {
+    fill: #7cb5b9;
+}

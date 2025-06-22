@@ -1,0 +1,58 @@
+import React from 'react';
+import quranBanner2 from '../../../assets/images/quran-banner.jpg'
+import quranBanner from '../../../assets/images/banner.png'
+import CustomBtn2 from '../../../Components/CustomBtn2';
+import '../Banner/Banner.css'
+import { Link } from 'react-router-dom';
+
+const Banner = () => {
+    return (
+        <div className='relative'>
+            <div className="hero min-h-screen bg-[#ECFBF9] relative " >
+                <div className="hero-content flex-col lg:flex-row-reverse gap-8 w-full max-w-7xl px-4 sm:px-6 md:px-8">
+
+                    <div className=''>
+                        <img
+                            src={quranBanner}
+                            className="animate-slide-in-right max-w-sm md:max-w-lg"
+                        />
+
+                    </div>
+
+                    <div className='space-y-4 text-center md:text-left max-w-xs lg:max-w-full'>
+                        <div className='relative  overflow-hidden'>
+                            <div className='animate-slide-in-left'>
+                                <span className='my-10 bg-[#fff] text-[#42CDD0] border border-0 rounded-full px-4 py-2 text-sm font-light animate-slide-in-left' >Know Your Deen</span>
+                            </div>
+                        </div>
+
+                        <h1 className="text-3xl md:text-4xl animate-slide-in-top font-bold text-[#2C366E] md:leading-[1.5]">
+
+                            The Best Platform to Read Quran Online</h1>
+                        <p className="py-6 font-light animate-slide-in-left
+                          text-sm sm:text-base overflow-hidden border-r-0">
+                            And We have certainly made the Quran easy to remember.
+                            So is there anyone who will be mindful? (54:40)
+                        </p>
+                        <div className='relative  overflow-hidden '>
+                            <div className='animate-slide-in-left'>
+                                <Link to='/quran'>
+                                <CustomBtn2 className="" link={/quran} >Read Quran</CustomBtn2>
+
+                                </Link>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    );
+};
+
+export default Banner;

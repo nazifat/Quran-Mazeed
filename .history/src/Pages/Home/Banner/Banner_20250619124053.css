@@ -1,0 +1,44 @@
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    0%, 100% { border-color: transparent }
+    50% { border-color: white }
+  }
+  
+  .animate-typing {
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: typing 3s steps(22, end) forwards;
+    animation-fill-mode: forwards;
+    position: relative;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+  
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  

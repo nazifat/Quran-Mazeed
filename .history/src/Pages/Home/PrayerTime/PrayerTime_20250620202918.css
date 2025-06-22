@@ -1,0 +1,10 @@
+.prayer-time {
+    background-image:
+    /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+     /* Top gradient layer */
+      url('https://i.ibb.co/7dpWhjZh/Blue-Purple-Watercolor-Islamic-Background-Instagram-Story.png'); /* Image layer */
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;
+    background-repeat: repeat;
+  }

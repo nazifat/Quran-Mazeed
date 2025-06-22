@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+
+}
+
+.inter-custom {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .custom-btn{
+    border: 1px solid #12D6DA ;
+    font-size: 16px;
+    padding:  28px;
+    font-weight: 100;
+   
+}
+
+.custom-btn:hover{
+    background-color: #12D6DA;
+    color: #000;
+
+}
+
+@media (max-width: 640px){
+    .custom-btn{
+        font-size: 12px;
+        padding:  20px;
+        font-weight: 100;
+       
+    }
+
+}
+
+
