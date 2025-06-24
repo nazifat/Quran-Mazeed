@@ -35,7 +35,6 @@ const QuranByPage = () => {
 
     return (
         <div>
-            
 
             <div className='grid lg:grid-cols-4 grid-cols-1 font-nunito text-gray-600'>
                 {
@@ -54,7 +53,7 @@ const QuranByPage = () => {
 
 
             </div>
-            <div className='flex justify-center gap-10  my-2'>
+            <div className='flex justify-center gap-10 '>
                 <Link disabled={currentPage === 1} className=' btn btn-base' onClick={handlePrevious}> <GrLinkPrevious /> Previous</Link>
                 <Link disabled={currentPage === totalPages} className=' btn btn-base' onClick={handleNext}>Next <GrLinkNext /></Link>
 

@@ -35,7 +35,6 @@ const QuranByPage = () => {
 
     return (
         <div>
-            
 
             <div className='grid lg:grid-cols-4 grid-cols-1 font-nunito text-gray-600'>
                 {

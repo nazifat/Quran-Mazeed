@@ -8,11 +8,9 @@ const SinglePageQuran = () => {
     const [pageNumber, setPageNumber] = useState(1);
     const [pageData, setPageData] = useState(null);
     const [ayahs, setAyahs] = useState([]);
-    const [currentPage, setCurrentPage] = useState(parseInt(pageNum) || 1);
-    const [cleanedAyahs, setCleanedAyahs] = useState([]);
-
+    const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 604;
-    const navigate = useNavigate();
+    const navigate= useNavigate();
     useEffect(() => {
         const page = parseInt(pageNum);
         fetch(`https://api.alquran.cloud/v1/page/${currentPage}/quran-uthmani`)
@@ -21,39 +19,13 @@ const SinglePageQuran = () => {
                 console.log("quran by page", data.data);
                 setPageData(data.data);
                 setAyahs(data.data.ayahs);
-                console.log("ayahs", ayahs);
-                const cleaned = data.data.ayahs.map((ayah) => {
-                    const isTawbah = ayah.surah?.number === 9;
-
-                    if (
-                        ayah.numberInSurah === 1 &&
-                        ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ') &&
-                        !isTawbah
-                    ) {
-                        return {
-                            ...ayah,
-                            basmala: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
-                            text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '').trim(),
-                        };
-                    }
-                    return ayah;
-                });
-
-                setCleanedAyahs(cleaned);
-
-            });
+                console.log("ayahs", ayahs)
+            })
 
         // Sync URL with currentPage
-        navigate(`/quranByPage/${currentPage}`, { replace: true });
+        navigate(`/page/${currentPage}`, { replace: true });
 
-    }, [currentPage, navigate]);
-
-    useEffect(() => {
-        const page = parseInt(pageNum);
-        if (!isNaN(page) && page >= 1 && page <= totalPages) {
-            setCurrentPage(page);
-        }
-    }, [pageNum]);
+    }, [currentPage]);
 
 
     const handlePrevious = () => {
@@ -67,8 +39,6 @@ const SinglePageQuran = () => {
 
     }
 
-
-
     return (
         <div>
 
@@ -76,23 +46,8 @@ const SinglePageQuran = () => {
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1'>
                 <p>Page No: {currentPage}</p>
 
-                {cleanedAyahs?.map(ayah => <div key={ayah.number}>
-                    {ayah.numberInSurah === 1 && (
-                        <div className="my-6 text-center">
-                            <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm w-1/4 mx-auto p-4">
-                                Surah  {ayah.surah?.englishName}
-                            </h2>
-                            {ayah.basmala && (
-                                <p className="mt-3 text-[#4F888B] text-lg font-semibold font-[Scheherazade]">
-                                    {ayah.basmala}
-                                </p>
-                            )}
-
-
-                        </div>
-                    )}
-
-                    <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
+                {ayahs?.map(ayah => <div key={ayah.numberInSurah}>
+                    <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0">
                         <span className="block font-hafs  text-2xl text-right leading-[2]">
                             {ayah.text}
 

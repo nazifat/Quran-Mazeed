@@ -21,26 +21,7 @@ const SinglePageQuran = () => {
                 console.log("quran by page", data.data);
                 setPageData(data.data);
                 setAyahs(data.data.ayahs);
-                console.log("ayahs", ayahs);
-                const cleaned = data.data.ayahs.map((ayah) => {
-                    const isTawbah = ayah.surah?.number === 9;
-
-                    if (
-                        ayah.numberInSurah === 1 &&
-                        ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ') &&
-                        !isTawbah
-                    ) {
-                        return {
-                            ...ayah,
-                            basmala: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
-                            text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '').trim(),
-                        };
-                    }
-                    return ayah;
-                });
-
-                setCleanedAyahs(cleaned);
-
+                console.log("ayahs", ayahs)
             });
 
         // Sync URL with currentPage
@@ -68,6 +49,24 @@ const SinglePageQuran = () => {
     }
 
 
+    const cleanedAyahs = ayahs.map((ayah) => {
+        // If it's Surah Tawbah (id 9), don't show Basmala
+        const isTawbah = ayah.surah?.number === 9;
+
+        if (
+            ayah.numberInSurah === 1 &&
+            ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ') &&
+            !isTawbah
+        ) {
+            return {
+                ...ayah,
+                basmala: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
+                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '').trim(),
+            };
+        }
+
+        return ayah;
+    });
 
     return (
         <div>
