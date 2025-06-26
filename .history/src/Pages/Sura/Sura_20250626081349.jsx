@@ -32,7 +32,7 @@ const Sura = () => {
 
 
     useEffect(() => {
-        fetch(`https://api.alquran.cloud/v1/surah/${suraNumber}/en.pickthall`)
+        fetch(`https://api.alquran.cloud/v1/surah/${suraNumber}/en.asad`)
             .then(res => res.json())
             .then(data => {
                 console.log("english sura data", data.data);

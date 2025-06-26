@@ -62,21 +62,19 @@ const SinglePageQuran = () => {
 
     }
 
+
     const cleanedAyahs = ayahs.map((ayah, index) => {
         if (
             index === 0 &&
-            suraNumber !== 1 &&
-            suraNumber !== 9 &&
             ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
         ) {
             return {
                 ...ayah,
-                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '').trim()
+                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', ' ').trim()
             };
         }
         return ayah;
     });
-    
 
     console.log("cleaned", cleanedAyahs);
 
@@ -87,7 +85,7 @@ const SinglePageQuran = () => {
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1'>
                 <p>Page No: {currentPage}</p>
 
-                {cleanedAyahs?.map(ayah => <div key={ayah.number}>
+                {ayahs?.map(ayah => <div key={ayah.number}>
                     {ayah.numberInSurah === 1 && (
                         <div className="my-6 text-center">
                             <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm w-1/4 mx-auto p-4">
