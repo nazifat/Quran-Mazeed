@@ -8,7 +8,7 @@ const SinglePageQuran = () => {
     const [pageData, setPageData] = useState(null);
     const [ayahs, setAyahs] = useState([]);
     // const [currentPage, setCurrentPage] = useState(parseInt(pageNum) || 1);
-    // const [cleanedAyahs, setCleanedAyahs] = useState([]);
+    const [cleanedAyahs, setCleanedAyahs] = useState([]);
     const [suraNumber, setSuraNumber] = useState(null);
     const navigate = useNavigate();
 
@@ -31,16 +31,29 @@ const SinglePageQuran = () => {
                 console.log("ayahs", fetchedAyahs);
                 // Store surah number once from the first ayah
                 setSuraNumber(fetchedAyahs[0]?.surah?.number);
+                 // Remove Basmala from first ayah if it's not Surah Fatiha or Tawbah
+            const cleaned = fetchedAyahs.map((ayah, index) => {
+                if (
+                    ayah.numberInSurah === 1 &&
+                    surahNum !== 1 &&
+                    surahNum !== 9 &&
+                    ayah.text.includes('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
+                ) {
+                    return {
+                        ...ayah,
+                        text: ayah.text.replace(/بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ[\s\u064B-\u0652]*?/g, '').trim()
+                    };
+                }
+                return ayah;
+            });
 
+            setAyahs(cleaned);
 
 
             });
 
 
-
-
-
-
+           
 
 
         // Sync URL with currentPage
@@ -48,7 +61,7 @@ const SinglePageQuran = () => {
 
     }, [currentPage]);
 
-
+  
 
 
     const handlePrevious = () => {
@@ -61,22 +74,8 @@ const SinglePageQuran = () => {
 
 
     }
+   
 
-
-    const cleanedAyahs = ayahs.map((ayah, index) => {
-        if (
-            index === 0 &&
-            ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
-        ) {
-            return {
-                ...ayah,
-                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', ' ').trim()
-            };
-        }
-        return ayah;
-    });
-
-    console.log("cleaned", cleanedAyahs);
 
     return (
         <div>
@@ -85,7 +84,7 @@ const SinglePageQuran = () => {
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1'>
                 <p>Page No: {currentPage}</p>
 
-                {ayahs?.map(ayah => <div key={ayah.number}>
+                {cleaned?.map(ayah => <div key={ayah.number}>
                     {ayah.numberInSurah === 1 && (
                         <div className="my-6 text-center">
                             <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm w-1/4 mx-auto p-4">
@@ -94,7 +93,7 @@ const SinglePageQuran = () => {
 
                             {
                                 suraNumber !== '1' && suraNumber !== '9' && (
-                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
+                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-[#2FD6D9] md:py-5 ">
                                         ﷽
                                     </p>
                                 )

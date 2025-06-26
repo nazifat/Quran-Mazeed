@@ -31,16 +31,29 @@ const SinglePageQuran = () => {
                 console.log("ayahs", fetchedAyahs);
                 // Store surah number once from the first ayah
                 setSuraNumber(fetchedAyahs[0]?.surah?.number);
-
+            
 
 
             });
 
 
+            const cleanedAyahs = ayahs.map((ayah, index) => {
+                if (
+                    index === 0 &&
+                    ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
+                ) {
+                    return {
+                        ...ayah,
+                        text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', 'kk').trim()
+                    };
+                }
+                return ayah;
+            });
+           
+        console.log("cleaned", cleanedAyahs);
 
 
-
-
+           
 
 
         // Sync URL with currentPage
@@ -48,7 +61,7 @@ const SinglePageQuran = () => {
 
     }, [currentPage]);
 
-
+  
 
 
     const handlePrevious = () => {
@@ -63,20 +76,7 @@ const SinglePageQuran = () => {
     }
 
 
-    const cleanedAyahs = ayahs.map((ayah, index) => {
-        if (
-            index === 0 &&
-            ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
-        ) {
-            return {
-                ...ayah,
-                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', ' ').trim()
-            };
-        }
-        return ayah;
-    });
-
-    console.log("cleaned", cleanedAyahs);
+   
 
     return (
         <div>
@@ -85,7 +85,7 @@ const SinglePageQuran = () => {
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1'>
                 <p>Page No: {currentPage}</p>
 
-                {ayahs?.map(ayah => <div key={ayah.number}>
+                {cle?.map(ayah => <div key={ayah.number}>
                     {ayah.numberInSurah === 1 && (
                         <div className="my-6 text-center">
                             <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm w-1/4 mx-auto p-4">

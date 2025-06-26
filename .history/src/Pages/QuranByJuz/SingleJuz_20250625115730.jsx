@@ -27,41 +27,31 @@ const SingleJuz = () => {
         <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1'>
 
             <p>Juz No. {juz.number}</p>
-            <div className="my-6">
+            <div className="my-6 text-center">
 
 
 
                 {
-                    ayahs?.map(ayah => (
-
-                        <div key={ayah.number} className=''>
-                            <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
-                                <span className="block font-hafs  text-2xl text-right leading-[2]">
-                                    {ayah.text}
+                    ayahs?.map(ayah => (<div key={ayah.number}>
 
 
-                                    <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
-                                        {ayah.numberInSurah}
-                                    </span>
+                        <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
+                            <span className="block font-hafs  text-2xl text-right leading-[2]">
 
-
-
-                                </span>
-
-
-                            </p>
+                                {ayah.text}
+                            </span>
+                            <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
+                                {ayah.numberInSurah}
+                            </span>
+                        </p>
 
 
 
-
-
-
-
-                        </div>))
+                    </div>))
 
                 }
             </div>
-        </div >
+        </div>
     );
 };
 

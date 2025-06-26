@@ -46,7 +46,7 @@ const Sura = () => {
 
 
     }
-    , [suraNumber]);
+        , [suraNumber])
 
 
     const totalPages = Math.ceil((ayahs?.length) / ayasPerPage);
@@ -80,7 +80,7 @@ const Sura = () => {
         return ayah;
     });
 
-console.log("sura page e ayat",cleanedAyahs);
+
 
     return (
         <div className=' p-10'>

@@ -35,24 +35,14 @@ const SingleJuz = () => {
                     ayahs?.map(ayah => (
 
                         <div key={ayah.number} className=''>
-                            <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
-                                <span className="block font-hafs  text-2xl text-right leading-[2]">
-                                    {ayah.text}
 
 
-                                    <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
-                                        {ayah.numberInSurah}
-                                    </span>
-
-
-
+                            <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b text-right font-hafs text-2xl leading-[2]">
+                                {ayah.text}
+                                <span className=" text-right inline-block mx-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-full text-sm font-bold border border-[#4F888B] shadow-sm font-[Scheherazade] align-middle">
+                                    {ayah.numberInSurah}
                                 </span>
-
-
                             </p>
-
-
-
 
 
 
@@ -61,7 +51,7 @@ const SingleJuz = () => {
 
                 }
             </div>
-        </div >
+        </div>
     );
 };
 

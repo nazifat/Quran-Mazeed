@@ -8,7 +8,7 @@ const SinglePageQuran = () => {
     const [pageData, setPageData] = useState(null);
     const [ayahs, setAyahs] = useState([]);
     // const [currentPage, setCurrentPage] = useState(parseInt(pageNum) || 1);
-    // const [cleanedAyahs, setCleanedAyahs] = useState([]);
+    const [cleanedAyahs, setCleanedAyahs] = useState([]);
     const [suraNumber, setSuraNumber] = useState(null);
     const navigate = useNavigate();
 
@@ -31,16 +31,13 @@ const SinglePageQuran = () => {
                 console.log("ayahs", fetchedAyahs);
                 // Store surah number once from the first ayah
                 setSuraNumber(fetchedAyahs[0]?.surah?.number);
-
+            
 
 
             });
 
 
-
-
-
-
+           
 
 
         // Sync URL with currentPage
@@ -48,7 +45,7 @@ const SinglePageQuran = () => {
 
     }, [currentPage]);
 
-
+  
 
 
     const handlePrevious = () => {
@@ -63,20 +60,20 @@ const SinglePageQuran = () => {
     }
 
 
-    const cleanedAyahs = ayahs.map((ayah, index) => {
+    const cleanedAyahs = currentAyahs.map((ayah, index) => {
         if (
             index === 0 &&
             ayah.text.startsWith('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ')
         ) {
             return {
                 ...ayah,
-                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', ' ').trim()
+                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '').trim()
             };
         }
         return ayah;
     });
+   
 
-    console.log("cleaned", cleanedAyahs);
 
     return (
         <div>

@@ -70,7 +70,7 @@ const SinglePageQuran = () => {
         ) {
             return {
                 ...ayah,
-                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', ' ').trim()
+                text: ayah.text.replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', 'kk').trim()
             };
         }
         return ayah;
