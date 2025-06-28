@@ -45,17 +45,6 @@ const SingleJuz = () => {
                         const showSurahName = currentSurahNum !== prevSurahNumber;
                         prevSurahNumber = currentSurahNum;
 
-                        // Check if we should hide Basmala
-                        const isBasmalaAyah =
-                            ayah.numberInSurah === 1 &&
-                            currentSurahNum !== 1 &&
-                            currentSurahNum !== 9 &&
-                            ayah.text.startsWith("بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ");
-
-                        const ayahText = isBasmalaAyah
-                            ? "" // remove Basmala
-                            : ayah.text;
-
 
                         return (
                             <div key={ayah.number} className=''>
@@ -73,12 +62,12 @@ const SingleJuz = () => {
 
                                 <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
                                     <span className="block font-hafs  text-2xl text-right leading-[2]">
-                                        {ayahText}
+                                        {ayah.text}
 
 
-                                        {ayahText && <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
+                                        <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
                                             {ayah.numberInSurah}
-                                        </span>}
+                                        </span>
 
 
 

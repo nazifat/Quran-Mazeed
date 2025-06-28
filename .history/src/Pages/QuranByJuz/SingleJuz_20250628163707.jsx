@@ -52,7 +52,7 @@ const SingleJuz = () => {
                             currentSurahNum !== 9 &&
                             ayah.text.startsWith("بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ");
 
-                        const ayahText = isBasmalaAyah
+                            const ayahText = isBasmalaAyah
                             ? "" // remove Basmala
                             : ayah.text;
 
@@ -76,9 +76,9 @@ const SingleJuz = () => {
                                         {ayahText}
 
 
-                                        {ayahText && <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
+                                        <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
                                             {ayah.numberInSurah}
-                                        </span>}
+                                        </span>
 
 
 

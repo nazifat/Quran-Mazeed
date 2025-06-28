@@ -34,7 +34,7 @@ const SinglePageQuran = () => {
 
                 const cleanedAyahs = fetchedAyahs.map((ayah, index) => {
                     if (
-                        // index === 0 &&
+                        index === 0 &&
                         // suraNumber !== 1 &&
                         // suraNumber !== 9 &&
                         ayah.text.startsWith('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
@@ -42,16 +42,6 @@ const SinglePageQuran = () => {
                         return {
                             ...ayah,
                             text: ayah.text.replace('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    } else if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
                         };
                     }
                     return ayah;
@@ -93,13 +83,12 @@ const SinglePageQuran = () => {
                 {ayahs?.map(ayah => <div key={ayah.number}>
                     {ayah.numberInSurah === 1 && (
                         <div className="my-6 text-center">
-                            <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm md:w-1/4 w-full mx-auto p-4">
-                                Surah  {ayah.surah?.englishName} 
+                            <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm w-1/4 mx-auto p-4">
+                                Surah  {ayah.surah?.englishName}
                             </h2>
 
                             {
-                                
-                                suraNumber !== 1 && suraNumber !== 9 && (
+                                suraNumber !== '1' && suraNumber !== '9' && (
                                     <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
                                         ﷽
                                     </p>
@@ -109,7 +98,7 @@ const SinglePageQuran = () => {
                         </div>
                     )}
 
-                    <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b px-2">
+                    <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
                         <span className="block font-hafs  text-2xl text-right leading-[2]">
                             {ayah.text}
 

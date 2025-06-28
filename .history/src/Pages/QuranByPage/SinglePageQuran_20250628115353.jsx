@@ -109,7 +109,7 @@ const SinglePageQuran = () => {
                         </div>
                     )}
 
-                    <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b px-2">
+                    <p className="text-lg leading-relaxed text-gray-800 mb-4 md:py-5 py-0 border-b">
                         <span className="block font-hafs  text-2xl text-right leading-[2]">
                             {ayah.text}
 
