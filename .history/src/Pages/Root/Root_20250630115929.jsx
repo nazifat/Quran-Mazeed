@@ -17,7 +17,7 @@ const Root = () => {
 
         <div>
 
-            {/* <ScrollToTop></ScrollToTop> */}
+            <ScrollToTop></ScrollToTop>
             <Navbar></Navbar>
 
             {navigation.state === "loading" && <Spinner />}

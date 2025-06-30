@@ -1,4 +1,3 @@
-// src/Pages/ScrollToTop/ScrollToTop.jsx
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -7,9 +6,9 @@ const ScrollToTop = () => {
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [pathname]);
+    }, [pathname]); // Scrolls to top on route change
 
-    return null; // it renders nothing
+    return null;
 };
 
 export default ScrollToTop;

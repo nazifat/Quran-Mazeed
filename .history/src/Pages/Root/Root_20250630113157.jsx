@@ -14,18 +14,17 @@ const Root = () => {
 
 
     return (
+        <>
+        <ScrollToTop></ScrollToTop>
+            <div>
 
-        <div>
+                <Navbar></Navbar>
+                {navigation.state === "loading" && <Spinner />}
 
-            {/* <ScrollToTop></ScrollToTop> */}
-            <Navbar></Navbar>
-
-            {navigation.state === "loading" && <Spinner />}
-
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-
+                <Outlet></Outlet>
+                <Footer></Footer>
+            </div>
+        </>
 
     );
 };
