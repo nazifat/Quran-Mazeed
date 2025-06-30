@@ -52,7 +52,7 @@ const SingleJuz = () => {
 
             <p>Juz No. {juz.number}</p>
             <div className="my-6">
-                {/* <div className="relative top-12 right-12 z-50">
+                <div className="relative top-12 right-12 z-50">
                     <button
                         onClick={scrollToBottom}
                         className="p-3 rounded-full bg-gradient-to-br from-[#AEE6F5] to-[#4F888B] text-white shadow-lg hover:scale-110 transition-transform duration-300"
@@ -69,7 +69,7 @@ const SingleJuz = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                </div> */}
+                </div>
 
                 {/* <div>
                     {Object.values(surahs).map(surah => (<p key={surah.number}>{surah.name}</p>))}
@@ -137,11 +137,10 @@ const SingleJuz = () => {
 
             <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="fixed bottom-6 right-6 bg-[#4F888B] hover:bg-[#3a6668] text-white px-4 py-2 rounded-full shadow-lg z-[9999]"
+                className="fixed bottom-6 right-6 bg-[#4F888B] hover:bg-[#3a6668] text-white px-4 py-2 rounded-full shadow-lg z-50"
             >
                 ⬆️ Top
             </button>
-
 
 
 

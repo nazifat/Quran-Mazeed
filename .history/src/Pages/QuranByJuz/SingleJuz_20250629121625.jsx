@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleJuz = () => {
     const { juzNum } = useParams();
     const [juz, setJuz] = useState(parseInt(juzNum) || 1);
     const [ayahs, setAyahs] = useState([]);
     const [surahs, setSurahs] = useState({});
-    const currentJuz = parseInt(juzNum) || 1;
+    const [currentJuz, setCurrentJuz] = useState(1);
     const totalJuz = 30;
-    const scrollToBottom = () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    };
-
-    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`https://api.alquran.cloud/v1/juz/${juzNum}/quran-uthmani`)
@@ -52,24 +47,6 @@ const SingleJuz = () => {
 
             <p>Juz No. {juz.number}</p>
             <div className="my-6">
-                {/* <div className="relative top-12 right-12 z-50">
-                    <button
-                        onClick={scrollToBottom}
-                        className="p-3 rounded-full bg-gradient-to-br from-[#AEE6F5] to-[#4F888B] text-white shadow-lg hover:scale-110 transition-transform duration-300"
-                        aria-label="Scroll to bottom"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                </div> */}
 
                 {/* <div>
                     {Object.values(surahs).map(surah => (<p key={surah.number}>{surah.name}</p>))}
@@ -129,24 +106,14 @@ const SingleJuz = () => {
             <div className='flex justify-center  gap-5 md:gap-10 items-center my-5'>
                 <Link className='btn md:btn-md btn-xs' onClick={handlePrevious} disabled={currentJuz === 1}>  Previous Juz</Link>
                 <span className="font-medium text-gray-700 text-sm md:text-base">
-                    Juz {currentJuz} of {totalJuz}
+                    Page {currentJuz} of {totalJuz}
                 </span>
 
                 <Link className='btn md:btn-md btn-xs' onClick={handleNext} disabled={currentJuz === totalJuz}>Next Juz</Link>
             </div>
 
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="fixed bottom-6 right-6 bg-[#4F888B] hover:bg-[#3a6668] text-white px-4 py-2 rounded-full shadow-lg z-[9999]"
-            >
-                ⬆️ Top
-            </button>
-
-
-
 
         </div >
-
 
     );
 };

@@ -137,11 +137,10 @@ const SingleJuz = () => {
 
             <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="fixed bottom-6 right-6 bg-[#4F888B] hover:bg-[#3a6668] text-white px-4 py-2 rounded-full shadow-lg z-[9999]"
+                className="fixed bottom-6 right-6 bg-[#4F888B] hover:bg-[#3a6668] text-white px-4 py-2 rounded-full shadow-lg z-50"
             >
                 ⬆️ Top
             </button>
-
 
 
 

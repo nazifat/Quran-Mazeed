@@ -14,6 +14,7 @@ import ScrollToTop from './Pages/ScrollToTop/ScrollToTop';
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
+    <ScrollToTop></ScrollToTop>
     <RouterProvider router={router} />
   </StrictMode>,
 )
