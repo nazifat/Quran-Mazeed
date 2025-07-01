@@ -96,11 +96,11 @@ const SinglePageQuran = () => {
                     {ayah.numberInSurah === 1 && (
                         <div className="my-6 text-center">
                             <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm md:w-1/2 w-full mx-auto p-4">
-                                Surah  {ayah.surah?.englishName}
+                                Surah  {ayah.surah?.englishName} 
                             </h2>
 
                             {
-
+                                
                                 suraNumber !== 1 && suraNumber !== 9 && (
                                     <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
                                         ﷽

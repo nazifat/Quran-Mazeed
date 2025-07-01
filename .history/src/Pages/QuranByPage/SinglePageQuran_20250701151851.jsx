@@ -1,6 +1,5 @@
 import React, { use, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 
 const SinglePageQuran = () => {
 
@@ -86,7 +85,6 @@ const SinglePageQuran = () => {
 
     return (
         <div>
-            <QuranSearch></QuranSearch>
 
 
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1'>
@@ -96,11 +94,11 @@ const SinglePageQuran = () => {
                     {ayah.numberInSurah === 1 && (
                         <div className="my-6 text-center">
                             <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm md:w-1/2 w-full mx-auto p-4">
-                                Surah  {ayah.surah?.englishName}
+                                Surah  {ayah.surah?.englishName} 
                             </h2>
 
                             {
-
+                                
                                 suraNumber !== 1 && suraNumber !== 9 && (
                                     <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
                                         ﷽
