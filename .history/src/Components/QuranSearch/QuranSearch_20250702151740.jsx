@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const QuranSearch = () => {
 
@@ -8,7 +8,7 @@ const QuranSearch = () => {
     const [ayahs, setAyahs] = useState([]);
     const [selectedSuraNumber, setSuraSelectedNumer] = useState(null);
     const [selectedAyah, setSelectedAyah] = useState(null);
-    const navigate= useNavigate()
+
     useEffect(() => {
         fetch('https://api.alquran.cloud/v1/surah')
             .then(res => res.json())
@@ -18,6 +18,7 @@ const QuranSearch = () => {
     const handleSurahChange = (e) => {
         // console.log(e.target.value);
         e.preventDefault();
+
         const surahNum = parseInt(e.target.value);
         setSuraSelectedNumer(surahNum);
         const surah = surahs.find(s => s.number === surahNum);
@@ -37,17 +38,7 @@ const QuranSearch = () => {
 
 
     const handleGoClick = (e) => {
-        // console.log(selectedSuraNumber, selectedAyah);
-
-        if(selectedSuraNumber && selectedAyah){
-            fetch(`http://api.alquran.cloud/v1/ayah/${selectedSuraNumber}:${selectedAyah}`)
-            .then(res=>res.json())
-            .then(data=>{
-                const pageNum= data.data.page;
-                const globalAyahNumber= data.data.number;
-                navigate(`/quran/page/${pageNum}?highlight=${globalAyahNumber}`);
-            })
-        }
+        console.log(selectedSuraNumber, selectedAyah);
 
     }
 

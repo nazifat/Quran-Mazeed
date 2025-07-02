@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 
 const QuranSearch = () => {
 
     const [surahs, setSurahs] = useState([]);
-    const [selectedSurah, setSelectedSurah] = useState(null);
+    const [selecedSurah, setSelectedSurah] = useState(null);
     const [ayahs, setAyahs] = useState([]);
-    const [selectedSuraNumber, setSuraSelectedNumer] = useState(null);
-    const [selectedAyah, setSelectedAyah] = useState(null);
-    const navigate= useNavigate()
+    const [suraNumber, setSuraNumer]=useState(null);
+
     useEffect(() => {
         fetch('https://api.alquran.cloud/v1/surah')
             .then(res => res.json())
@@ -16,10 +14,10 @@ const QuranSearch = () => {
     }, [])
 
     const handleSurahChange = (e) => {
-        // console.log(e.target.value);
-        e.preventDefault();
+        console.log(e.target.value);
+
         const surahNum = parseInt(e.target.value);
-        setSuraSelectedNumer(surahNum);
+        setSuraNumer(suraNum);
         const surah = surahs.find(s => s.number === surahNum);
         setSelectedSurah(surah);
         setAyahs(Array.from({ length: surah.numberOfAyahs }, (_, i) => i + 1));
@@ -27,32 +25,12 @@ const QuranSearch = () => {
 
     }
 
-    const handleAyahChange = (e) => {
-        e.preventDefault();
-        // console.log("ayat", e.target.value);
-        const ayahNumber = parseInt(e.target.value);
-        setSelectedAyah(ayahNumber);
-    }
-
-
-
-    const handleGoClick = (e) => {
-        // console.log(selectedSuraNumber, selectedAyah);
-
-        if(selectedSuraNumber && selectedAyah){
-            fetch(`http://api.alquran.cloud/v1/ayah/${selectedSuraNumber}:${selectedAyah}`)
-            .then(res=>res.json())
-            .then(data=>{
-                const pageNum= data.data.page;
-                const globalAyahNumber= data.data.number;
-                navigate(`/quran/page/${pageNum}?highlight=${globalAyahNumber}`);
-            })
-        }
-
+    const handleAyahChange= (e)=>{
+        console.log("ayat", e.target.value);
     }
 
     return (
-        <div className='py-10'>
+        <div className='py-10'> 
 
             {/* <h2>Go to the Verse Directly</h2> */}
             <div className='flex gap-4 justify-center'>
@@ -67,7 +45,7 @@ const QuranSearch = () => {
                         ))
                     }
                 </select>
-                <select defaultValue="Select an Ayah" onChange={handleAyahChange} disabled={!selectedSurah} className="select">
+                <select defaultValue="Select an Ayah" onChange={handleAyahChange} disabled={!selecedSurah} className="select">
                     <option disabled={true}>
                         Select an Ayah
                     </option>
@@ -79,11 +57,6 @@ const QuranSearch = () => {
                         ))
                     }
                 </select>
-
-                <Link className='btn btn-ghost bg-pink-200'
-                    onClick={handleGoClick}
-                    disabled={!selectedSuraNumber || !selectedAyah}
-                >  Go</Link>
             </div>
 
         </div>

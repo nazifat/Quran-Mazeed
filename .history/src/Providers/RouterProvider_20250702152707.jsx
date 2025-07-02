@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
                 element: <Tazweed></Tazweed>
             },
             {
-                path: "/quran/page/:pageNum",
+                path: "/quran/page",
                 element: <SearchedPage></SearchedPage>
             }
             
