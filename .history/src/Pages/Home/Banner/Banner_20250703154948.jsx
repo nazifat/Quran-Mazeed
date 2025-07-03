@@ -36,7 +36,7 @@ const Banner = () => {
                             And We have certainly made the Quran easy to remember.
                             So is there anyone who will be mindful? (54:40)
                         </p>
-                        <div className='relative  overflow-hidden md:flex-row flex flex-col items-center gap-5 '>
+                        <div className='  overflow-hidden md:flex-row flex flex-col items-center gap-5 '>
                             {/* <div className='animate-slide-in-left '> */}
 
                                 <CustomBtn2 className="" link='quran'>Read Quran</CustomBtn2>

@@ -75,7 +75,7 @@ const QuranSearch = () => {
                     disabled={!selectedSurah}
                     className="select">
                     <option disabled value=''>
-                        Ayah
+                        Select an Ayah
                     </option>
                     {
                         ayahs.map(ayahNum => (

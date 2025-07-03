@@ -6,6 +6,7 @@ import QuranSearch from '../../../Components/QuranSearch/QuranSearch'
 import '../Banner/Banner.css'
 import { Link } from 'react-router-dom';
 import NavigateQuran from '../../../Components/NavigateQuran/NavigateQuran';
+import PrayerTime from '../PrayerTime/PrayerTime';
 
 const Banner = () => {
     return (
@@ -14,10 +15,12 @@ const Banner = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse gap-8 w-full max-w-7xl px-4 sm:px-6 md:px-8">
 
                     <div className=''>
-                        <img
+                        {/* <img
                             src={quranBanner}
                             className="animate-slide-in-right max-w-sm md:max-w-lg"
-                        />
+                        /> */}
+
+                        <PrayerTime></PrayerTime>
 
                     </div>
 
@@ -36,15 +39,13 @@ const Banner = () => {
                             And We have certainly made the Quran easy to remember.
                             So is there anyone who will be mindful? (54:40)
                         </p>
-                        <div className='relative  overflow-hidden md:flex-row flex flex-col items-center gap-5 '>
-                            {/* <div className='animate-slide-in-left '> */}
+                        <div className='relative  overflow-hidden '>
+                            <div className='animate-slide-in-left md:flex-row flex flex-col items-center gap-5'>
 
                                 <CustomBtn2 className="" link='quran'>Read Quran</CustomBtn2>
 
-                            {/* </div> */}
-                            <NavigateQuran></NavigateQuran>
 
-                            
+                            </div>
 
 
 

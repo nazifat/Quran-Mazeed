@@ -9,7 +9,7 @@ import NavigateQuran from '../../../Components/NavigateQuran/NavigateQuran';
 
 const Banner = () => {
     return (
-        <div className='relative' >
+        <div className='relative'>
             <div className="hero min-h-screen bg-[#ECFBF9] relative " >
                 <div className="hero-content flex-col lg:flex-row-reverse gap-8 w-full max-w-7xl px-4 sm:px-6 md:px-8">
 
@@ -36,26 +36,20 @@ const Banner = () => {
                             And We have certainly made the Quran easy to remember.
                             So is there anyone who will be mindful? (54:40)
                         </p>
-                        <div className='relative  overflow-hidden md:flex-row flex flex-col items-center gap-5 '>
-                            {/* <div className='animate-slide-in-left '> */}
-
+                        <div className='relative  overflow-hidden '>
+                            <div className='animate-slide-in-left flex'>
+                               
                                 <CustomBtn2 className="" link='quran'>Read Quran</CustomBtn2>
 
-                            {/* </div> */}
-                            <NavigateQuran></NavigateQuran>
+                                <NavigateQuran></NavigateQuran>
 
-                            
-
-
-
+                            </div>
                         </div>
 
                     </div>
                 </div>
 
-
             </div>
-
 
 
 

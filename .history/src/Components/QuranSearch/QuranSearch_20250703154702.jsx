@@ -58,7 +58,7 @@ const QuranSearch = () => {
             {/* <h2>Go to the Verse Directly</h2> */}
             <div className='flex gap-4 justify-center'>
                 <select defaultValue="Select a Surah" onChange={handleSurahChange} className="select">
-                    <option disabled={true}> Surah</option>
+                    <option disabled={true}>Select a Surah</option>
                     {
                         surahs.map(surah => (
                             <option key={surah.number} value={surah.number}>
@@ -75,7 +75,7 @@ const QuranSearch = () => {
                     disabled={!selectedSurah}
                     className="select">
                     <option disabled value=''>
-                        Ayah
+                        Select an Ayah
                     </option>
                     {
                         ayahs.map(ayahNum => (

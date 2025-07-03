@@ -8,11 +8,13 @@ import NavigateQuran from '../../Components/NavigateQuran/NavigateQuran';
 const Home = () => {
     return (
         <div className='font-nunito'>
+            <NavigateQuran></NavigateQuran>
             <div className='relative'>
                 <Banner></Banner>
                 <WaveDivider></WaveDivider>
             </div>
             <div className='text-center'>
+            <NavigateQuran></NavigateQuran>
 
             </div>
 
