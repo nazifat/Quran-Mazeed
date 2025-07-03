@@ -8,7 +8,6 @@ const SearchedPage = () => {
     const navigate = useNavigate();
     const ayahRefs = useRef({});
     const page = parseInt(pageNum);
-    const [suraNumber, setSuraNumber] = useState(null);
     const [ayahs, setAyahs] = useState([]);
 
     useEffect(() => {
@@ -17,37 +16,6 @@ const SearchedPage = () => {
             .then(data => {
                 setAyahs(data.data.ayahs);
                 console.log(data.data.ayahs);
-                const fetchedAyahs = data.data.ayahs;
-                setSuraNumber(fetchedAyahs[0]?.surah?.number);
-
-
-                const cleanedAyahs = fetchedAyahs.map((ayah, index) => {
-                    if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    } else if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    }
-                    return ayah;
-                });
-
-                setAyahs(cleanedAyahs);
-
 
             })
 
@@ -88,14 +56,14 @@ const SearchedPage = () => {
                                 Surah  {ayah.surah?.englishName}
                             </h2>
 
-                            {
+                            {/* {
 
                                 suraNumber !== 1 && suraNumber !== 9 && (
                                     <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
                                         ﷽
                                     </p>
                                 )
-                            }
+                            } */}
 
                         </div>
                     )}

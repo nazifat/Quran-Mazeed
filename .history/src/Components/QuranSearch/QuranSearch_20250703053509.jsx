@@ -70,7 +70,7 @@ const QuranSearch = () => {
                 </select>
                 <select
                     defaultValue="Select an Ayah"
-                    value={selectedAyah ?? ''}
+                    value={selectedAyah ?? 'select'}
                     onChange={handleAyahChange}
                     disabled={!selectedSurah}
                     className="select">
@@ -86,10 +86,10 @@ const QuranSearch = () => {
                     }
                 </select>
 
-                <button className='btn btn-ghost bg-pink-200'
+                <Link className='btn btn-ghost bg-pink-200'
                     onClick={handleGoClick}
                     disabled={!selectedSuraNumber || !selectedAyah}
-                >  Go</button>
+                >  Go</Link>
             </div>
 
         </div>

@@ -8,7 +8,6 @@ const SearchedPage = () => {
     const navigate = useNavigate();
     const ayahRefs = useRef({});
     const page = parseInt(pageNum);
-    const [suraNumber, setSuraNumber] = useState(null);
     const [ayahs, setAyahs] = useState([]);
 
     useEffect(() => {
@@ -17,41 +16,10 @@ const SearchedPage = () => {
             .then(data => {
                 setAyahs(data.data.ayahs);
                 console.log(data.data.ayahs);
-                const fetchedAyahs = data.data.ayahs;
-                setSuraNumber(fetchedAyahs[0]?.surah?.number);
-
-
-                const cleanedAyahs = fetchedAyahs.map((ayah, index) => {
-                    if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    } else if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    }
-                    return ayah;
-                });
-
-                setAyahs(cleanedAyahs);
-
 
             })
 
-    }, [pageNum])
+    }, [])
 
     useEffect(() => {
         if (highlightAyah && ayahRefs.current[highlightAyah]) {
@@ -81,27 +49,9 @@ const SearchedPage = () => {
         <div className='px-10 text-right py-10'>
             <h2 className='py-2'>Page No: {pageNum}</h2>
             {
-                ayahs.map(ayah => <div key={ayah.number}>
-                    {ayah.numberInSurah === 1 && (
-                        <div className="my-6 text-center">
-                            <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm md:w-1/2 w-full mx-auto p-4">
-                                Surah  {ayah.surah?.englishName}
-                            </h2>
-
-                            {
-
-                                suraNumber !== 1 && suraNumber !== 9 && (
-                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
-                                        ﷽
-                                    </p>
-                                )
-                            }
-
-                        </div>
-                    )}
-                    
+                ayahs.map(ayah => (
                     <p
-                     
+                        key={ayah.number}
                         ref={(el) => (ayahRefs.current[ayah.number] = el)}
                         className={`py-3 ${highlightAyah == ayah.number ? 'bg-pink-100' : ""}`}
                     >
@@ -115,8 +65,7 @@ const SearchedPage = () => {
 
                         </span>
                     </p>
-                    </div>
-                )
+                ))
             }
 
             <div className='flex justify-between px-10 pb-10'>

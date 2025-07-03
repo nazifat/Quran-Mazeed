@@ -86,10 +86,10 @@ const QuranSearch = () => {
                     }
                 </select>
 
-                <button className='btn btn-ghost bg-pink-200'
+                <Link className='btn btn-ghost bg-pink-200'
                     onClick={handleGoClick}
                     disabled={!selectedSuraNumber || !selectedAyah}
-                >  Go</button>
+                >  Go</Link>
             </div>
 
         </div>

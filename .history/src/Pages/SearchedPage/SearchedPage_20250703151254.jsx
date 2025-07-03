@@ -21,33 +21,6 @@ const SearchedPage = () => {
                 setSuraNumber(fetchedAyahs[0]?.surah?.number);
 
 
-                const cleanedAyahs = fetchedAyahs.map((ayah, index) => {
-                    if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    } else if (
-                        // index === 0 &&
-                        // suraNumber !== 1 &&
-                        // suraNumber !== 9 &&
-                        ayah.text.startsWith('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')
-                    ) {
-                        return {
-                            ...ayah,
-                            text: ayah.text.replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', '').trim()
-                        };
-                    }
-                    return ayah;
-                });
-
-                setAyahs(cleanedAyahs);
-
 
             })
 

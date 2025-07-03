@@ -8,7 +8,7 @@ const QuranSearch = () => {
     const [ayahs, setAyahs] = useState([]);
     const [selectedSuraNumber, setSuraSelectedNumer] = useState(null);
     const [selectedAyah, setSelectedAyah] = useState(null);
-    const navigate = useNavigate()
+    const navigate= useNavigate()
     useEffect(() => {
         fetch('https://api.alquran.cloud/v1/surah')
             .then(res => res.json())
@@ -23,7 +23,7 @@ const QuranSearch = () => {
         const surah = surahs.find(s => s.number === surahNum);
         setSelectedSurah(surah);
         setAyahs(Array.from({ length: surah.numberOfAyahs }, (_, i) => i + 1));
-        setSelectedAyah(null);
+        setSelectedAyah(null); 
 
     }
 
@@ -32,7 +32,7 @@ const QuranSearch = () => {
         // console.log("ayat", e.target.value);
         const ayahNumber = parseInt(e.target.value);
         setSelectedAyah(ayahNumber);
-
+        
     }
 
 
@@ -40,14 +40,14 @@ const QuranSearch = () => {
     const handleGoClick = (e) => {
         // console.log(selectedSuraNumber, selectedAyah);
 
-        if (selectedSuraNumber && selectedAyah) {
+        if(selectedSuraNumber && selectedAyah){
             fetch(`http://api.alquran.cloud/v1/ayah/${selectedSuraNumber}:${selectedAyah}`)
-                .then(res => res.json())
-                .then(data => {
-                    const pageNum = data.data.page;
-                    const globalAyahNumber = data.data.number;
-                    navigate(`/quran/page/${pageNum}?highlight=${globalAyahNumber}`);
-                })
+            .then(res=>res.json())
+            .then(data=>{
+                const pageNum= data.data.page;
+                const globalAyahNumber= data.data.number;
+                navigate(`/quran/page/${pageNum}?highlight=${globalAyahNumber}`);
+            })
         }
 
     }
@@ -68,13 +68,8 @@ const QuranSearch = () => {
                         ))
                     }
                 </select>
-                <select
-                    defaultValue="Select an Ayah"
-                    value={selectedAyah ?? ''}
-                    onChange={handleAyahChange}
-                    disabled={!selectedSurah}
-                    className="select">
-                    <option disabled value=''>
+                <select defaultValue="Select an Ayah" onChange={handleAyahChange} disabled={!selectedSurah} className="select">
+                    <option disabled={true}>
                         Select an Ayah
                     </option>
                     {
@@ -86,10 +81,10 @@ const QuranSearch = () => {
                     }
                 </select>
 
-                <button className='btn btn-ghost bg-pink-200'
+                <Link className='btn btn-ghost bg-pink-200'
                     onClick={handleGoClick}
                     disabled={!selectedSuraNumber || !selectedAyah}
-                >  Go</button>
+                >  Go</Link>
             </div>
 
         </div>
