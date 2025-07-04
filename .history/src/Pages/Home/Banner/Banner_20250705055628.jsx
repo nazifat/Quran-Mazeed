@@ -1,6 +1,6 @@
 import React from 'react';
-// import quranBanner2 from '../../../assets/images/quran-banner.jpg'
-// import quranBanner from '../../../assets/images/banner.png'
+import quranBanner2 from '../../../assets/images/quran-banner.jpg'
+import quranBanner from '../../../assets/images/banner.png'
 import CustomBtn2 from '../../../Components/CustomBtn2';
 // import QuranSearch from '../../../Components/QuranSearch/QuranSearch'
 import '../Banner/Banner.css'
@@ -15,7 +15,7 @@ const Banner = () => {
 
                     <div className=''>
                         <img
-                            src="https://i.ibb.co/bMJ9CHCN/pngtree-muslimah-woman-reading-quran-vector-png-image-6672794-removebg-preview.png"
+                            src={quranBanner}
                             className="animate-slide-in-right max-w-sm md:max-w-lg"
                         />
 
