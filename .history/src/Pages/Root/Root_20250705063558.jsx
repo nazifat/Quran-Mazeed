@@ -8,14 +8,11 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const Root = () => {
     const navigation = useNavigation();
-    // const [darkMode, setDarkMode] = useState(()=>{
-    //     const storedTheme = localStorage.getItem('theme');
-    //     return storedTheme === 'dark';
-    //     return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [darkMode, setDarkMode] = useState(()=>{
+        const storedTheme = localStorage.getItem('theme');
+        return storedTheme === 'dark';
     
-    // });
-
-    const [darkMode, setDarkMode]= useState(false);
+    });
 
     useEffect(()=>{
         const storedTheme= localStorage.getItem('theme');

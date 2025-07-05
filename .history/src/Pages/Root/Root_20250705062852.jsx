@@ -8,14 +8,11 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const Root = () => {
     const navigation = useNavigation();
-    // const [darkMode, setDarkMode] = useState(()=>{
-    //     const storedTheme = localStorage.getItem('theme');
-    //     return storedTheme === 'dark';
-    //     return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // });
-
-    const [darkMode, setDarkMode]= useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', darkMode);
+        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+      }, [darkMode]);
 
     useEffect(()=>{
         const storedTheme= localStorage.getItem('theme');
@@ -23,17 +20,15 @@ const Root = () => {
             setDarkMode(true);
     },[])
 
-    useEffect(() => {
-      document.documentElement.classList.toggle('dark', darkMode);
-      localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-    }, [darkMode]);
+  
+
 
     return (
 
         <div className='pt-16'>
 
             {/* <ScrollToTop></ScrollToTop> */}
-            <Navbar  darkMode={darkMode} setDarkMode={setDarkMode}></Navbar>
+            <Navbar></Navbar>
 
             {navigation.state === "loading" && <Spinner />}
 

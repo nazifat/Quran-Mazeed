@@ -15,7 +15,7 @@ const Root = () => {
     
     // });
 
-    const [darkMode, setDarkMode]= useState(false);
+    const [darkMode, setDarkMode]= useState(false)
 
     useEffect(()=>{
         const storedTheme= localStorage.getItem('theme');

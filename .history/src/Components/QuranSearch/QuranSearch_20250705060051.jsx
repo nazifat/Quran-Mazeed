@@ -60,10 +60,9 @@ const QuranSearch = () => {
                 <select
                     // defaultValue="Select a Surah"
                     value={selectedSuraNumber ?? ''}
-                    onChange={handleSurahChange} 
-                    className="select">
 
-                    <option disabled={true} value=""> Surah</option>
+                    onChange={handleSurahChange} className="select">
+                    <option disabled={true}> Surah</option>
                     {
                         surahs.map(surah => (
                             <option key={surah.number} value={surah.number}>

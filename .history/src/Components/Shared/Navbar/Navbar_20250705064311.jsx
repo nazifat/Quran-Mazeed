@@ -25,7 +25,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
     </>
     return (
-        <div className="navbar dark:bg-[#000] fixed top-0 z-50 bg-[#ffffff]  shadow-sm custom-navbar md:px-10 font-inter">
+        <div className="navbar dark:bg-[#000]  fixed top-0 z-50 bg-[#ffffff]  shadow-sm custom-navbar md:px-10 font-inter">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

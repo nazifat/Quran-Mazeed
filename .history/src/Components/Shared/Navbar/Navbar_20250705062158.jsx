@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import '../Navbar/navbar.css'
 import CustomBtn from '../../CustomBtn';
 import { CiHeart } from "react-icons/ci";
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
+    const [darkMode, setDarkMode] = useState(false);
 
-  
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', darkMode);
+    }, [darkMode]);
 
+    
     const navlinks = <>
 
         <li><NavLink to="/">Home</NavLink></li>
@@ -16,16 +20,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li><NavLink to="/quran">Quran</NavLink></li>
         <li><NavLink to="/tazweed">Tazweed</NavLink></li>
         <li>
-            <button 
+            {/* <button 
             className="m-4 p-2 bg-gray-200 dark:bg-gray-700 rounded"
             onClick={()=> setDarkMode(!darkMode)}            
             > 
-            {darkMode? 'light' : "Dark"} Mode</button>
+            {darkMode? 'light' : "Dark"} Mode</button> */}
         </li>
 
     </>
     return (
-        <div className="navbar dark:bg-[#000] fixed top-0 z-50 bg-[#ffffff]  shadow-sm custom-navbar md:px-10 font-inter">
+        <div className="navbar  fixed top-0 z-50 bg-[#ffffff]  shadow-sm custom-navbar md:px-10 font-inter">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
