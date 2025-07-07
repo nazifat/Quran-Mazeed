@@ -52,27 +52,7 @@ body {
     "wdth" 100,
     "YTLC" 500; 
 }*/
-.custom-btn {
-  border: 1px solid #12d6da;
-  font-size: 16px;
-  padding: 28px;
-  font-weight: 100;
-  color: #000;
-}
 
-.custom-btn:hover {
-  background-color: #12d6da;
-  color: #000;
-}
-
-.dark .custom-btn {
-  color: #12d6da;
-}
-
-.dark .custom-btn:hover {
-  background-color: #12d6da;
-  color: #000;
-}
 
 @media (max-width: 640px) {
   .custom-btn {

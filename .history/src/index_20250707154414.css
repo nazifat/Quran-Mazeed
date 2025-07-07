@@ -64,7 +64,7 @@ body {
   background-color: #12d6da;
   color: #000;
 }
-
+/* 
 .dark .custom-btn {
   color: #12d6da;
 }
@@ -72,7 +72,7 @@ body {
 .dark .custom-btn:hover {
   background-color: #12d6da;
   color: #000;
-}
+} */
 
 @media (max-width: 640px) {
   .custom-btn {
