@@ -8,24 +8,19 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const Root = () => {
     const navigation = useNavigation();
-    const getInitialTheme = () => {
-        const saved = localStorage.getItem('theme');
-        if (saved === 'dark') return true;
-        if (saved === 'light') return false;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    };
-    const [darkMode, setDarkMode] = useState(getInitialTheme);
-    // Add or remove dark class based on isDark
-    useEffect(() => {
-        const root = document.documentElement;
-        if (darkMode) {
-          root.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          root.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
-        }
-      }, [darkMode]);
+    const [darkMode, setDarkMode] = useState(() =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+
+  // Add or remove dark class based on isDark
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [darkMode]);
 
     return (
 

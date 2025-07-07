@@ -19,13 +19,11 @@ const Root = () => {
     useEffect(() => {
         const root = document.documentElement;
         if (darkMode) {
-          root.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
+            root.classList.add('dark');
         } else {
-          root.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
+            root.classList.remove('dark');
         }
-      }, [darkMode]);
+    }, [darkMode]);
 
     return (
 

@@ -17,20 +17,20 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/quran">Quran</NavLink></li>
         <li><NavLink to="/tazweed">Tazweed</NavLink></li>
-        <li>
         
-            <button
+            <li><NavLink to="/tazweed">Tazweed</NavLink></li>
 
-                className=" bg-gray-600 :bg-gray-800 rounded"
+            {/* <button
+                className=" bg-gray-300 dark:bg-gray-700 rounded"
                 onClick={() => setDarkMode(!darkMode)}
             >
                 {darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
-            </button>
-        </li>
+            </button> */}
+        
 
     </>
     return (
-        <div className="navbar dark:text-[#fff] dark:bg-[#000] fixed top-0 z-50 bg-[#ffffff]  shadow-sm  custom-navbar md:px-10 font-inter">
+        <div className="navbar dark:bg-[#000] fixed top-0 z-50 bg-[#ffffff]  shadow-sm custom-navbar md:px-10 font-inter">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         {navlinks}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-lg text-[#0FD2D6] ">
+                <Link to="/" className="btn btn-ghost text-lg ">
                     Quran Mazeed
                 </Link>
             </div>

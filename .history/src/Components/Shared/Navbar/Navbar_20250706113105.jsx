@@ -19,13 +19,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li><NavLink to="/tazweed">Tazweed</NavLink></li>
         <li>
         
-            <button
-
+            <NavLink
                 className=" bg-gray-600 :bg-gray-800 rounded"
                 onClick={() => setDarkMode(!darkMode)}
             >
                 {darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
-            </button>
+            </NavLink>
         </li>
 
     </>

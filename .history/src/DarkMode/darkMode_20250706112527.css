@@ -1,0 +1,7 @@
+@media (prefers-color-scheme: dark) {
+    .custom-navbar ul li a{
+        font-size: 16px;
+        color: red;
+    }
+  }
+  
