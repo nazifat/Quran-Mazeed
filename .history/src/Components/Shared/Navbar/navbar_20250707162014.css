@@ -1,0 +1,19 @@
+.custom-navbar .active {
+  color: #12d6da;
+}
+
+.custom-navbar ul li a {
+  font-size: 16px;
+  color: #2c366d;
+}
+
+.dark .custom-navbar ul li a,
+.dark .dropdown-content ul li a{
+  color: #ffffff;
+}
+
+.dark .custom-navbar .active {
+  color: #12d6da;
+}
+
+

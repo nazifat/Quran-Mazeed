@@ -1,0 +1,15 @@
+.dark .contact-form input,
+.dark .contact-form textarea,
+.dark .contact-form label,
+.dark .contact-form h2 {
+  color: aliceblue;
+  background-color: black;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form label,
+.contact-form h2 {
+  color: rgb(20, 18, 18);
+  background-color: white;
+}

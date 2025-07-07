@@ -1,5 +1,4 @@
 import { useState } from "react";
-import '../Contact/Contact.css'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,22 +25,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative flex contact-form items-center justify-center  bg-gray-100 px-6 py-20"
+    <div className="flex items-center justify-center bg-gray-100 px-6 py-20"
       style={{
         backgroundImage: "url('https://i.ibb.co/7dpWhjZh/Blue-Purple-Watercolor-Islamic-Background-Instagram-Story.png')",
         backgroundAttachment: "fixed"
       }}
     >
-      <div className="absolute inset-0 dark:bg-black opacity-50 z-0"></div>
-      <div className="w-full max-w-lg bg-white dark:bg-[#000]
-       shadow-lg rounded-xl p-8 relative z-10">
+      <div className="w-full max-w-lg bg-white shadow-lg rounded-xl p-8">
         <h2 className="text-2xl font-semibold text-gray-600 mb-6 text-center">Contact Us</h2>
         {submitted ? (
           <p className="text-green-600 font-medium text-center">Thank you for your message!</p>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium ">Name</label>
+              <label className="block text-sm font-medium text-gray-600">Name</label>
               <input
                 type="text"
                 name="name"
@@ -53,26 +50,26 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium ">Email</label>
+              <label className="block text-sm font-medium text-gray-600">Email</label>
               <input
                 type="email"
                 name="email"
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className=" w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="text-gray-600 bg-gray-200 w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium ">Message</label>
+              <label className="block text-sm font-medium text-gray-600">Message</label>
               <textarea
                 name="message"
                 rows="5"
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="text-gray-600 bg-gray-200 w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
               ></textarea>
             </div>
 

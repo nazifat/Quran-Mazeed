@@ -32,9 +32,8 @@ const Contact = () => {
         backgroundAttachment: "fixed"
       }}
     >
-      <div className="absolute inset-0 dark:bg-black opacity-50 z-0"></div>
       <div className="w-full max-w-lg bg-white dark:bg-[#000]
-       shadow-lg rounded-xl p-8 relative z-10">
+       shadow-lg rounded-xl p-8">
         <h2 className="text-2xl font-semibold text-gray-600 mb-6 text-center">Contact Us</h2>
         {submitted ? (
           <p className="text-green-600 font-medium text-center">Thank you for your message!</p>

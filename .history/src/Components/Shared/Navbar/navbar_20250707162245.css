@@ -5,6 +5,7 @@
 .custom-navbar ul li a {
   font-size: 16px;
   color: #2c366d;
+  background-color: #fff;
 }
 
 .dark .custom-navbar ul li a{
@@ -16,11 +17,4 @@
   color: #12d6da;
 }
 
-
-.custom-navbar .dropdown .dropdown-content{
-    background-color: white;
-}
-.dark .custom-navbar .dropdown .dropdown-content{
-    background-color: black;
-}
 

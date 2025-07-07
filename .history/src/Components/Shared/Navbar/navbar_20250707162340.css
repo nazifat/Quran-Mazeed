@@ -17,10 +17,7 @@
 }
 
 
-.custom-navbar .dropdown .dropdown-content{
+.custom-navbar{
     background-color: white;
-}
-.dark .custom-navbar .dropdown .dropdown-content{
-    background-color: black;
 }
 

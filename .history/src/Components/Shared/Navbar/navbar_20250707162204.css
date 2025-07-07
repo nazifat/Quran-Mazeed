@@ -8,19 +8,11 @@
 }
 
 .dark .custom-navbar ul li a{
-  color: #fff;
-
+  color: #000;
 }
 
 .dark .custom-navbar .active {
   color: #12d6da;
 }
 
-
-.custom-navbar .dropdown .dropdown-content{
-    background-color: white;
-}
-.dark .custom-navbar .dropdown .dropdown-content{
-    background-color: black;
-}
 
