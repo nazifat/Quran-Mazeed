@@ -10,7 +10,7 @@ import NavigateQuran from '../../../Components/NavigateQuran/NavigateQuran';
 const Banner = () => {
     return (
         <div className='relative' >
-            <div className="hero min-h-screen bg-[#ECFBF9]  dark:bg-[#264653] relative" >
+            <div className="hero min-h-screen bg-[#ECFBF9] relative" >
                 <div className="hero-content flex-col lg:flex-row-reverse gap-8 w-full max-w-7xl px-4 sm:px-6 md:px-8">
 
                     <div className=''>
@@ -24,15 +24,14 @@ const Banner = () => {
                     <div className='space-y-4 text-center md:text-left max-w-xs lg:max-w-full'>
                         <div className='relative  overflow-hidden'>
                             <div className='animate-slide-in-left'>
-                                <span className='my-10  dark:text-gray-600 bg-[#fff] text-[#42CDD0] border rounded-full px-4 py-6 text-sm font-bold animate-slide-in-left' >
-                                    Know Your Deen</span>
+                                <span className='my-10 bg-[#fff] text-[#42CDD0] border border-0 rounded-full px-4 py-4 text-sm font-bold animate-slide-in-left' >Know Your Deen</span>
                             </div>
                         </div>
 
-                        <h1 className="text-3xl  md:text-4xl animate-slide-in-top font-bold text-[#2C366E] dark:text-gray-100">
+                        <h1 className="text-3xl md:text-4xl animate-slide-in-top font-bold text-[#2C366E]">
 
                             The Best Platform to Read Quran Online</h1>
-                        <p className="text-gray-600 dark:text-gray-100 font-light animate-slide-in-left
+                        <p className=" font-light animate-slide-in-left
                           text-sm sm:text-base overflow-hidden border-r-0">
                             And We have certainly made the Quran easy to remember.
                             So is there anyone who will be mindful? (54:40)

@@ -7,7 +7,7 @@ const NavigateQuran = () => {
             {/* Trigger Button (can be placed anywhere) */}
             <label
                 htmlFor="my-drawer-4"
-                className="btn custom-btn bg-[#42CDD0] dark:text-gray-100 hover:bg-[#35b6ba] shadow-md"
+                className="btn custom-btn bg-[#42CDD0] text-red-300 hover:bg-[#35b6ba] shadow-md"
             >
                 Navigate Quran
             </label>

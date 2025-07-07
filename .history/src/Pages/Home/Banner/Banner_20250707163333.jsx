@@ -24,7 +24,7 @@ const Banner = () => {
                     <div className='space-y-4 text-center md:text-left max-w-xs lg:max-w-full'>
                         <div className='relative  overflow-hidden'>
                             <div className='animate-slide-in-left'>
-                                <span className='my-10  dark:text-gray-600 bg-[#fff] text-[#42CDD0] border rounded-full px-4 py-6 text-sm font-bold animate-slide-in-left' >
+                                <span className='my-10 dark:bg-[#00B4D8] dark:text-white bg-[#fff] text-[#42CDD0] border border-0 rounded-full px-4 py-6 text-sm font-bold animate-slide-in-left' >
                                     Know Your Deen</span>
                             </div>
                         </div>
@@ -32,7 +32,7 @@ const Banner = () => {
                         <h1 className="text-3xl  md:text-4xl animate-slide-in-top font-bold text-[#2C366E] dark:text-gray-100">
 
                             The Best Platform to Read Quran Online</h1>
-                        <p className="text-gray-600 dark:text-gray-100 font-light animate-slide-in-left
+                        <p className=" font-light animate-slide-in-left
                           text-sm sm:text-base overflow-hidden border-r-0">
                             And We have certainly made the Quran easy to remember.
                             So is there anyone who will be mindful? (54:40)
