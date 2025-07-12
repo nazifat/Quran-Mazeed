@@ -68,10 +68,10 @@ const PrayerTime = () => {
 
                 <div className='pb-5'>
                     {/* <p className="text-lg font-medium">Your City: {location}</p> */}
-                    <p className="dark:text-pink-200 text-lg text-blue-500 ">{dayName} {date} </p>
+                    <p className="text-lg text-blue-500 ">{dayName} {date} </p>
                 </div>
             </div>
-            <div className='text-center dark:bg-black bg-white  rounded-lg shadow-md max-w-sm  md:w-1/2 w-full mx-10 '>
+            <div className='text-center bg-white  rounded-lg shadow-md max-w-sm  md:w-1/2 w-full mx-10 '>
 
                 {/* <ul className="space-y-2 text-left">
                     {['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Sunset', 'Isha',].map((name) => (
@@ -101,7 +101,7 @@ const PrayerTime = () => {
                             {/* row 1 */}
 
                             {['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Sunset', 'Isha',].map((name) => (
-                                <tr key={name} className='ml-5  dark:text-gray-300'>
+                                <tr key={name} className='ml-5 '>
 
                                     <th >{name}</th>
                                     <td className='mb-5'>{convertTo12Hour(times[name])}</td>

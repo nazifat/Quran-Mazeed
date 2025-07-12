@@ -1,0 +1,6 @@
+.dark .custom-footer footer,
+.dark .custom-footer footer a, 
+.dark .custom-footer footer p{ 
+    background-color: black;
+    color:aliceblue;
+}

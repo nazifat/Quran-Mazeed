@@ -101,10 +101,10 @@ const PrayerTime = () => {
                             {/* row 1 */}
 
                             {['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Sunset', 'Isha',].map((name) => (
-                                <tr key={name} className='ml-5  dark:text-gray-300'>
+                                <tr key={name} className='ml-5'>
 
                                     <th >{name}</th>
-                                    <td className='mb-5'>{convertTo12Hour(times[name])}</td>
+                                    <td className='mb-5 dark:text-gray-300'>{convertTo12Hour(times[name])}</td>
                                    
                                 </tr>
 
