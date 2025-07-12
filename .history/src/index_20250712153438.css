@@ -12,9 +12,6 @@ body {
   overflow-x: hidden;
   background-color: white;
 }
-.dark body{
-  background-color: rgb(16, 5, 5);
-}
 
 .arabic-text {
   font-family: "KFGQPC Uthman Taha Naskh", serif;
