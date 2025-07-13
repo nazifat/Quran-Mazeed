@@ -55,7 +55,7 @@ const QuranByPage = () => {
 
             </div>
             <div className='flex justify-center gap-10  my-2'>
-                <Link disabled={currentPage === 1} className='btn btn-base text-gray-300 ' onClick={handlePrevious}> <GrLinkPrevious /> Previous</Link>
+                <Link disabled={currentPage === 1} className='btn btn-base text-gray-300' onClick={handlePrevious}> <GrLinkPrevious /> Previous</Link>
                 <Link disabled={currentPage === totalPages} className=' btn btn-base' onClick={handleNext}>Next <GrLinkNext /></Link>
 
             </div>

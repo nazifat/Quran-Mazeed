@@ -11,11 +11,10 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: white;
-  color: black;
 }
 .dark body{
   background-color: rgb(16, 5, 5);
-  color: black;
+  color: white;
 }
 
 .arabic-text {

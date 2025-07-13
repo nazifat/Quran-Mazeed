@@ -127,7 +127,19 @@ const SingleJuz = () => {
 
             </div>
             <div className='flex justify-center  gap-5 md:gap-10 items-center my-5'>
-                <Link className='btn md:btn-md btn-xs ' onClick={handlePrevious} disabled={currentJuz === 1}>  Previous Juz</Link>
+                <Link
+                    className={`btn md:btn-md btn-xs btn-outline
+                                border border-black 
+                                text-white 
+                                bg-black 
+                                disabled:text-gray-400 disabled:border-gray-400 dark:disabled:text-gray-500 dark:disabled:border-gray-600
+                            `}
+                    onClick={handlePrevious}
+                    disabled={currentJuz === 1}
+                >
+                    Previous Juz
+                </Link>
+
                 <span className="font-medium text-gray-700 text-sm md:text-base">
                     Juz {currentJuz} of {totalJuz}
                 </span>

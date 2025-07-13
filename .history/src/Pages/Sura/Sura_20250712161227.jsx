@@ -90,7 +90,7 @@ console.log("sura page e ayat",cleanedAyahs);
 
             </h1>
 
-            <p className='text-center my-2 dark:text-gray-100'>Page No. {page}</p>
+            <p className='text-center my-2'>Page No. {page}</p>
 
 
 

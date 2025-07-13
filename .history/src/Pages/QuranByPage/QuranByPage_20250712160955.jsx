@@ -37,7 +37,7 @@ const QuranByPage = () => {
         <div>
             
 
-            <div className='grid lg:grid-cols-4 grid-cols-1 font-nunito text-gray-600  dark:text-gray-100'>
+            <div className='grid lg:grid-cols-4 grid-cols-1 font-nunito text-gray-600  dark:text-red-100'>
                 {
                     pageNumbersToShow.map(pageNum =>
 
@@ -55,7 +55,7 @@ const QuranByPage = () => {
 
             </div>
             <div className='flex justify-center gap-10  my-2'>
-                <Link disabled={currentPage === 1} className='btn btn-base text-gray-300 ' onClick={handlePrevious}> <GrLinkPrevious /> Previous</Link>
+                <Link disabled={currentPage === 1} className=' btn btn-base' onClick={handlePrevious}> <GrLinkPrevious /> Previous</Link>
                 <Link disabled={currentPage === totalPages} className=' btn btn-base' onClick={handleNext}>Next <GrLinkNext /></Link>
 
             </div>

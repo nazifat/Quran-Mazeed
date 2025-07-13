@@ -90,7 +90,7 @@ console.log("sura page e ayat",cleanedAyahs);
 
             </h1>
 
-            <p className='text-center my-2 dark:text-gray-100'>Page No. {page}</p>
+            <p className='text-center my-2'>Page No. {page}</p>
 
 
 
@@ -125,7 +125,7 @@ console.log("sura page e ayat",cleanedAyahs);
                         {ayahsEnglish.filter(ayahEng => ayahEng.numberInSurah === ayah.numberInSurah).map(ayahEng =>
 
                             <div className='' key={ayahEng.numberInSurah}>
-                                <p className='text-left font-nunito leading-[1.75] dark:text-gray-100 ' >
+                                <p className='text-left font-nunito leading-[1.75]' >
 
                                     {ayahEng.text}
 

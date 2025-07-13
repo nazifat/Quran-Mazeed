@@ -13,7 +13,9 @@
 
 
 .dark .custom-quran input:not(:checked) {
+  background-color: white;
   border: 1px solid gray;
+  color: black;
 }
 
 

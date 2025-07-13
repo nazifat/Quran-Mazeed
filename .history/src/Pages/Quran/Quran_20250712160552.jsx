@@ -57,11 +57,11 @@ const Quran = () => {
                 </div>
 
                 <input type="radio" name="my_tabs_3" className="tab custom-tab " aria-label="Juz" />
-                <div className="tab-content dark:bg-base-100 bg-white border-base-300 p-6 dark:text-red-100">
+                <div className="tab-content dark:bg-base-100 bg-white border-base-300 p-6">
                     <QuranByJuz></QuranByJuz>
                 </div>
-                <input type="radio" name="my_tabs_3" className="tab custom-tab" aria-label="Page" />
-                <div className="tab-content dark:bg-base-100 bg-white border-base-300 p-6">
+                <input type="radio" name="my_tabs_3" className="tab custom-tab " aria-label="Page" />
+                <div className="tab-content bg-base-100 border-base-300 p-6">
                     <QuranByPage></QuranByPage>
                 
                 

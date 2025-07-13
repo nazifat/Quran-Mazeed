@@ -54,10 +54,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <div className="navbar-end gap-2">
                 <button
 
-                    className=" bg-gray-600 px-4 py-2 :bg-gray-800 rounded"
+                    className=" bg-gray-600 :bg-gray-800 rounded"
                     onClick={() => setDarkMode(!darkMode)}
                 >
-                    {darkMode ? <MdOutlineLightMode /> : <MdDarkMode className='text-gray-100' />}
+                    {darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
                 </button>
 
                 <CustomBtn text="Donate">

@@ -7,14 +7,10 @@
 
 .custom-quran input:not(:checked) {
   background-color: white;
-  border: 1px solid skyblue;
+  border: 1px solid pink;
   color: black;
 }
 
-
-.dark .custom-quran input:not(:checked) {
-  border: 1px solid gray;
-}
 
 
 

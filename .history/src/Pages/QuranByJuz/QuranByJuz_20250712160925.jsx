@@ -6,7 +6,7 @@ const QuranByJuz = () => {
     return (
         <div>
 
-        <div className='grid lg:grid-cols-4 grid-cols-1 font-nunito text-gray-600  dark:text-gray-100'>
+        <div className='grid lg:grid-cols-4 grid-cols-1 font-nunito text-gray-600  dark:text-red-100'>
             {
                 [...Array(totalJuz).keys()].map(i => {
                     const juzNum = i + 1;

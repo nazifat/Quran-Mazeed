@@ -1,0 +1,26 @@
+/* Base styles */
+.custom-tab {
+  appearance: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  margin-right: 4px;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  color: #333;
+  border-radius: 4px;
+}
+
+/* Selected tab style */
+.custom-tab:checked {
+  background-color: #3b82f6; /* blue */
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Optional: tab content style */
+.custom-tab-content {
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}

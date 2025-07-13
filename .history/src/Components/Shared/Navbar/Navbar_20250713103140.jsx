@@ -17,7 +17,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/quran">Quran</NavLink></li>
         <li><NavLink to="/tazweed">Tazweed</NavLink></li>
-        {/* <li>
+        <li>
 
             <button
 
@@ -26,7 +26,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             >
                 {darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
             </button>
-        </li> */}
+        </li>
 
     </>
     return (
@@ -51,13 +51,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     {navlinks}
                 </ul>
             </div>
-            <div className="navbar-end gap-2">
+            <div className="navbar-end">
                 <button
 
-                    className=" bg-gray-600 px-4 py-2 :bg-gray-800 rounded"
+                    className=" bg-gray-600 :bg-gray-800 rounded"
                     onClick={() => setDarkMode(!darkMode)}
                 >
-                    {darkMode ? <MdOutlineLightMode /> : <MdDarkMode className='text-gray-100' />}
+                    {darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
                 </button>
 
                 <CustomBtn text="Donate">

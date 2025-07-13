@@ -1,0 +1,22 @@
+.custom-quran {
+}
+
+.dark .custom-quran .tab input{
+}
+
+.custom-quran input {
+  background-color: white;
+  color: white;
+  
+}
+
+
+
+.custom-quran input:not(:checked) {
+  background-color: red;
+  color: white;
+}
+
+
+
+

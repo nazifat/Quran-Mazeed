@@ -50,7 +50,7 @@ const SingleJuz = () => {
 
         <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1 py-10'>
 
-            <p className='text-gray-600 dark:text-gray-100'>Juz No. {juz.number}</p>
+            <p>Juz No. {juz.number}</p>
             <div className="my-6">
                 {/* <div className="relative top-12 right-12 z-50">
                     <button
@@ -127,7 +127,7 @@ const SingleJuz = () => {
 
             </div>
             <div className='flex justify-center  gap-5 md:gap-10 items-center my-5'>
-                <Link className='btn md:btn-md btn-xs ' onClick={handlePrevious} disabled={currentJuz === 1}>  Previous Juz</Link>
+                <Link className='btn md:btn-md btn-xs' onClick={handlePrevious} disabled={currentJuz === 1}>  Previous Juz</Link>
                 <span className="font-medium text-gray-700 text-sm md:text-base">
                     Juz {currentJuz} of {totalJuz}
                 </span>
