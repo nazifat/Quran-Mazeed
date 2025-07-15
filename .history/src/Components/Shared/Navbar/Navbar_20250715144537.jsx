@@ -18,8 +18,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* <li><NavLink to="/about">About</NavLink></li> */}
         <li><NavLink to="/quran">Quran</NavLink></li>
         <li><NavLink to="/tazweed">Tazweed</NavLink></li>
-        {/* <NavLink> <NavigateQuran></NavigateQuran> </NavLink> */}
-        
+
         {/* <li>
 
             <button
@@ -62,6 +61,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 >
                     {darkMode ? <MdOutlineLightMode /> : <MdDarkMode className='text-gray-100' />}
                 </button>
+                <NavLink> <NavigateQuran></NavigateQuran> </NavLink>
+
 
                 <CustomBtn text="Donate">
                     <CiHeart size={24} />

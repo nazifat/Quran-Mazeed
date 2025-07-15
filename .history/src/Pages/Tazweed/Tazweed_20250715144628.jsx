@@ -3,7 +3,7 @@ import '../Tazweed/Tazweed.css'
 
 const Tazweed = () => {
     return (
-        <div className='w-3/4 my-5 mx-auto tazweed-rules font-nunito leading-[2] md:yp-10 p-0 custom-tazweed'>
+        <div className='w-3/4 my-5 mx-auto tazweed-rules font-nunito leading-[2] md:p-10 p-0 custom-tazweed'>
             <h1 className='text-3xl text-center py-5'>Tazweed Rules</h1>
             <img className='shadow-xl rounded-lg  my-10' src="https://i.ibb.co/zWQrpgbc/learn-noorani-qaidah.webp" alt="" />
             <div className='space-y-10'>

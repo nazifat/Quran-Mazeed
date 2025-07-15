@@ -18,8 +18,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* <li><NavLink to="/about">About</NavLink></li> */}
         <li><NavLink to="/quran">Quran</NavLink></li>
         <li><NavLink to="/tazweed">Tazweed</NavLink></li>
-        {/* <NavLink> <NavigateQuran></NavigateQuran> </NavLink> */}
-        
+        <NavLink> <NavigateQuran></NavigateQuran> </NavLink>
+
         {/* <li>
 
             <button
