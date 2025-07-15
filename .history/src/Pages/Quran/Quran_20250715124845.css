@@ -1,0 +1,32 @@
+
+.custom-quran input {
+  background-color: white;
+  color: black;
+  
+}
+
+.custom-quran input:not(:checked) {
+  background-color: white;
+  border: 1px solid skyblue;
+  color: black;
+}
+
+
+.dark .custom-quran input:not(:checked) {
+  border: 1px solid gray;
+}
+
+.dark .custom-quran input:checked {
+  border: 1px solid red;
+  background-color: pink;
+}
+
+.custom-quran input:checked {
+  background-color: white;
+  border: 1px solid skyblue;
+  color: black;
+}
+
+
+
+
