@@ -78,7 +78,7 @@ const QuranSearch = () => {
                     value={selectedAyah ?? ''}
                     onChange={handleAyahChange}
                     disabled={!selectedSurah}
-                    className='bg-white dark:bg-gray-600 border-gray-400 text-black disabled:text-gray-200 disabled:bg-gray-400 dark:text-gray-100  select'>
+                    className='bg-white dark:bg-gray-600 border-gray-400 text-black dark:text-gray-100  select'>
                     <option disabled value=''>
                         Ayah
                     </option>
