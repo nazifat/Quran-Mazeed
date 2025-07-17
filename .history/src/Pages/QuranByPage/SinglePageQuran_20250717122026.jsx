@@ -102,7 +102,7 @@ const SinglePageQuran = () => {
                             {
 
                                 suraNumber !== 1 && suraNumber !== 9 && (
-                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-[#2FD6D9] md:py-5 ">
+                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5 ">
                                         ﷽
                                     </p>
                                 )
@@ -136,15 +136,9 @@ const SinglePageQuran = () => {
                 <span className="font-medium text-gray-700 text-sm md:text-base">
                     Page {currentPage} of {totalPages}
                 </span>
-
+ 
                 <button className='btn md:btn-md btn-xs next-btn' onClick={handleNext} disabled={currentPage === totalPages}>Next Page</button>
             </div>
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="fixed bottom-6 right-6 bg-pink-400 hover:bg-pink-600 text-white px-4 py-2 rounded-full shadow-lg z-[9999] text-xl md:text-2xl"
-            >
-                ⬆
-            </button>
         </div>
     );
 };

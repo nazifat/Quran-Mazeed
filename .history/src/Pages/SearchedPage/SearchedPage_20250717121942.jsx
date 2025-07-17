@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import NavigateQuran from '../../Components/NavigateQuran/NavigateQuran';
-import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 
 const SearchedPage = () => {
     const { pageNum } = useParams();
@@ -81,7 +80,7 @@ const SearchedPage = () => {
 
     return (
         <div className='px-10 text-right py-10'>
-            <QuranSearch></QuranSearch>
+            <NavigateQuran />
             <h2 className='py-2 text-black dark:text-white'>Page No: {pageNum}</h2>
             {
                 ayahs.map(ayah => <div key={ayah.number}>
@@ -94,7 +93,7 @@ const SearchedPage = () => {
                             {
 
                                 suraNumber !== 1 && suraNumber !== 9 && (
-                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-[#2FD6D9] md:py-5 ">
+                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-red-400 md:py-5  ">
                                         ﷽
                                     </p>
                                 )
@@ -102,9 +101,9 @@ const SearchedPage = () => {
 
                         </div>
                     )}
-
+                    
                     <p
-
+                     
                         ref={(el) => (ayahRefs.current[ayah.number] = el)}
                         className={`py-3 ${highlightAyah == ayah.number ? 'bg-gray-400' : ""}`}
                     >
@@ -118,7 +117,7 @@ const SearchedPage = () => {
 
                         </span>
                     </p>
-                </div>
+                    </div>
                 )
             }
 
@@ -139,12 +138,6 @@ const SearchedPage = () => {
                     Next
                 </button>
             </div>
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="fixed bottom-6 right-6 bg-pink-400 hover:bg-pink-600 text-white px-4 py-2 rounded-full shadow-lg z-[9999] text-xl md:text-2xl"
-            >
-                ⬆
-            </button>
 
         </div>
     );

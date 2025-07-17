@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FaArrowAltCircleUp } from "react-icons/fa";
-import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 const SingleJuz = () => {
     const { juzNum } = useParams();
     const [juz, setJuz] = useState(parseInt(juzNum) || 1);
@@ -50,7 +49,7 @@ const SingleJuz = () => {
 
 
         <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto  md:px-5 px-1 py-10'>
-            <QuranSearch></QuranSearch>
+
             <p className='text-gray-600 dark:text-gray-100'>Juz No. {juz.number}</p>
             <div className="my-6">
                 {/* <div className="relative top-12 right-12 z-50">

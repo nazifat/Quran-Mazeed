@@ -1,6 +1,5 @@
 import React, { use, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 
 const Sura = () => {
 
@@ -85,7 +84,6 @@ const Sura = () => {
 
     return (
         <div className=' p-10'>
-            <QuranSearch></QuranSearch>
             <h1 className="text-xl md:text-2xl md:w-1/4 w-full mx-auto font-bold text-center text-gray-700 mb-6 tracking-wide font-nunito border px-5 py-2 rounded-full bg-[#C8EFF9] hover:bg-[#AEE6F5] transition-colors duration-300">
                 <span className='font-hafs text-base block my-2'> {suraData?.name}</span>
                 Surah {suraData?.englishName}
