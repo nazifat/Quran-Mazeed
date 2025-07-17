@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const QuranSearch = () => {
+const QuranSearchSideBar = () => {
 
     const [surahs, setSurahs] = useState([]);
     const [selectedSurah, setSelectedSurah] = useState(null);
@@ -56,7 +56,7 @@ const QuranSearch = () => {
         <div className='py-10'>
 
             {/* <h2>Go to the Verse Directly</h2> */}
-            <div className='flex gap-4 justify-center'>
+            <div className='flex md:flex-row flex-col gap-4 justify-center'>
                 <select
                     // defaultValue="Select a Surah"
                     value={selectedSuraNumber ?? ''}
@@ -102,4 +102,4 @@ const QuranSearch = () => {
     );
 };
 
-export default QuranSearch;
+export default QuranSearchSideBar;
