@@ -4,7 +4,9 @@ import { GiPalmTree } from "react-icons/gi";
 const Donate = () => {
     const [amount, setAmount] = useState("");
     const [customAmount, setCustomAmount] = useState("");
-    
+    const [customerName, setCustomerName] = useState("");
+    const [customerEmail, setCustomerEmail] = useState("");
+    const [customerPhone, setCustomerPhone] = useState("");
 
 
     const handleAmountClick = (value) => {
@@ -34,8 +36,8 @@ const Donate = () => {
                 },
                 body: JSON.stringify({
                     amount: finalAmount,
-                    customerName: "Anonymous",
-                    customerEmail: "no-reply@example.com",
+                    customerName: name || "Anonymous",
+                    customerEmail: email || "no-reply@example.com",
                 }),
             });
 

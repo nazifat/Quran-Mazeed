@@ -4,7 +4,9 @@ import { GiPalmTree } from "react-icons/gi";
 const Donate = () => {
     const [amount, setAmount] = useState("");
     const [customAmount, setCustomAmount] = useState("");
-    
+    const [customerName, setCustomerName] = useState("");
+    const [customerEmail, setCustomerEmail] = useState("");
+    const [customerPhone, setCustomerPhone] = useState("");
 
 
     const handleAmountClick = (value) => {
@@ -29,16 +31,13 @@ const Donate = () => {
         try {
             const res = await fetch("https://quran-server-6o4zwn93w-nazifa-tabassums-projects.vercel.app/api/payment", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     amount: finalAmount,
-                    customerName: "Anonymous",
-                    customerEmail: "no-reply@example.com",
+                    customerName: "Your Name",
+                    customerEmail: "you@example.com",
                 }),
             });
-
 
             const data = await res.json();
             if (data.url) {
@@ -67,6 +66,44 @@ const Donate = () => {
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-4 mb-6">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                Name (optional)
+                            </label>
+                            <input
+                                type="text"
+                                value={customerName}
+                                onChange={(e) => setCustomerName(e.target.value)}
+                                placeholder="Your name"
+                                className="w-full border px-4 py-2 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring focus:border-[#15B3B6]"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                Email (optional)
+                            </label>
+                            <input
+                                type="email"
+                                value={customerEmail}
+                                onChange={(e) => setCustomerEmail(e.target.value)}
+                                placeholder="Your email"
+                                className="w-full border px-4 py-2 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring focus:border-[#15B3B6]"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                Phone (optional)
+                            </label>
+                            <input
+                                type="tel"
+                                value={customerPhone}
+                                onChange={(e) => setCustomerPhone(e.target.value)}
+                                placeholder="Your phone"
+                                className="w-full border px-4 py-2 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring focus:border-[#15B3B6]"
+                            />
+                        </div>
+                    </div>
 
                     {/* Preset amounts */}
                     <div className="flex justify-center gap-4">

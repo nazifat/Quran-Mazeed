@@ -4,7 +4,9 @@ import { GiPalmTree } from "react-icons/gi";
 const Donate = () => {
     const [amount, setAmount] = useState("");
     const [customAmount, setCustomAmount] = useState("");
-    
+    const [customerName, setCustomerName] = useState("");
+    const [customerEmail, setCustomerEmail] = useState("");
+    const [customerPhone, setCustomerPhone] = useState("");
 
 
     const handleAmountClick = (value) => {
@@ -29,16 +31,13 @@ const Donate = () => {
         try {
             const res = await fetch("https://quran-server-6o4zwn93w-nazifa-tabassums-projects.vercel.app/api/payment", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     amount: finalAmount,
-                    customerName: "Anonymous",
-                    customerEmail: "no-reply@example.com",
+                    customerName: "Your Name",
+                    customerEmail: "you@example.com",
                 }),
             });
-
 
             const data = await res.json();
             if (data.url) {
@@ -67,7 +66,6 @@ const Donate = () => {
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-
                     {/* Preset amounts */}
                     <div className="flex justify-center gap-4">
                         {[100, 250, 500].map((val) => (

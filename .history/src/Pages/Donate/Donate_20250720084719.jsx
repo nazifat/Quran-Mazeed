@@ -34,8 +34,8 @@ const Donate = () => {
                 },
                 body: JSON.stringify({
                     amount: finalAmount,
-                    customerName: "Anonymous",
-                    customerEmail: "no-reply@example.com",
+                    customerName: name || "Anonymous",
+                    customerEmail: email || "no-reply@example.com",
                 }),
             });
 
