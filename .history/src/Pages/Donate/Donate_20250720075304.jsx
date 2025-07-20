@@ -71,8 +71,8 @@ const Donate = () => {
                                 aria-required
                                 onClick={() => handleAmountClick(val)}
                                 className={`px-4 py-2 rounded-md border ${amount === val
-                                    ? "bg-[#15B3B6] text-white"
-                                    : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
+                                        ? "bg-[#15B3B6] text-white"
+                                        : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
                                     }`}
                             >
                                 ৳{val}
@@ -108,13 +108,13 @@ const Donate = () => {
                         </select>
                     </div>
 
-                    <button
-                        type="submit"
-                        className="w-full bg-[#15B3B6] hover:bg-[#119CA0] text-white font-semibold py-2 rounded-md text-center"
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full block bg-[#15B3B6] hover:bg-[#119CA0] text-white font-semibold py-2 rounded-md text-center"
                     >
                         Donate Now
-                    </button>
-
+                    </a>
                 </form>
 
                 <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300">
