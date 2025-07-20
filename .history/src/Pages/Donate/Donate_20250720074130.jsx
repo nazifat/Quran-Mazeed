@@ -25,7 +25,7 @@ const Donate = () => {
         }
 
         try {
-            const res = await fetch("https://quran-server-6o4zwn93w-nazifa-tabassums-projects.vercel.app/api/payment", {
+            const res = await fetch("https://quran-server-6o4zwn93w-nazifa-tabassums-projects.vercel.app/api.payment", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

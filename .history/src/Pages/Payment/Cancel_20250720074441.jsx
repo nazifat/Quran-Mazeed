@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RouterProvider = () => {
+const Cancel = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const RouterProvider = () => {
     );
 };
 
-export default RouterProvider;
+export default Cancel;
