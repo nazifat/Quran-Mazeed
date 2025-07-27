@@ -167,7 +167,7 @@ const Sura = () => {
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto md:px-5 px-1'>{cleanedAyahs.map(ayah => (
 
                 <div className='' key={ayah.numberInSurah}>
-                    <div className='flex justify-between items-center gap-2'>
+                    <div className='flex md:flex-row flex-col justify-between items-center'>
                         {/* Play / Pause Button */}
                         {suraAudio.length > 0 && (
                             <button
@@ -240,7 +240,7 @@ const Sura = () => {
 
             <div className='flex justify-center  gap-5 md:gap-10 items-center'>
                 <button className='btn md:btn-md btn-xs previous-btn' onClick={handlePrevious} disabled={page === 1}>  Previous page</button>
-                <span className="font-medium text-gray-700 text-sm md:text-base text-center">
+                <span className="font-medium text-gray-700 text-sm md:text-base">
                     Page {page} of {totalPages}
                 </span>
 

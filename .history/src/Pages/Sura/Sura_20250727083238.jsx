@@ -240,7 +240,7 @@ const Sura = () => {
 
             <div className='flex justify-center  gap-5 md:gap-10 items-center'>
                 <button className='btn md:btn-md btn-xs previous-btn' onClick={handlePrevious} disabled={page === 1}>  Previous page</button>
-                <span className="font-medium text-gray-700 text-sm md:text-base text-center">
+                <span className="font-medium text-gray-700 text-sm md:text-base">
                     Page {page} of {totalPages}
                 </span>
 

@@ -177,7 +177,7 @@ const Sura = () => {
                                         handlePlayPause(ayah.numberInSurah, audioAyah.audio);
                                     }
                                 }}
-                                className="ml-4 bg-[#15B3B6] text-white px-2 py-1 text-xs rounded hover:bg-pink-400 items-center"
+                                className="ml-4 bg-[#15B3B6] text-white px-2 py-1 text-xs rounded hover:bg-pink-400 items-center text-right"
                             >
                                 {playingAyahNumber === ayah.numberInSurah ? <FaPause />
                                     : <FaPlay />
@@ -240,7 +240,7 @@ const Sura = () => {
 
             <div className='flex justify-center  gap-5 md:gap-10 items-center'>
                 <button className='btn md:btn-md btn-xs previous-btn' onClick={handlePrevious} disabled={page === 1}>  Previous page</button>
-                <span className="font-medium text-gray-700 text-sm md:text-base text-center">
+                <span className="font-medium text-gray-700 text-sm md:text-base">
                     Page {page} of {totalPages}
                 </span>
 
