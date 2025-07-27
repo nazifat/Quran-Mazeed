@@ -20,8 +20,7 @@ const Sura = () => {
     const suraAudio = useSurahAudio(suraNumber);
     // State to track which ayah's audio is currently playing
     const [playingAyahNumber, setPlayingAyahNumber] = useState(null);
-    const [playingIndex, setPlayingIndex] = useState(null);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+
     // Single audio instance to control playback
     const audioRef = useRef(null);
 
@@ -96,15 +95,6 @@ const Sura = () => {
         }
     };
 
-    const startAutoPlay = () => {
-        setIsAutoPlaying(true);
-        setPlayingAyahNumber(0);
-    };
-    const pauseAudio = () => {
-        setIsAutoPlaying(false);
-        audioRef.current?.pause();
-    };
-
 
     // Cleanup audio on component unmount
     useEffect(() => {
@@ -115,7 +105,6 @@ const Sura = () => {
             }
         };
     }, []);
-
 
     const handlePrevious = () => {
         if (page > 1)
@@ -167,7 +156,7 @@ const Sura = () => {
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto md:px-5 px-1'>{cleanedAyahs.map(ayah => (
 
                 <div className='' key={ayah.numberInSurah}>
-                    <div className='flex justify-between items-center'>
+                    <div>
                         {/* Play / Pause Button */}
                         {suraAudio.length > 0 && (
                             <button
@@ -177,7 +166,7 @@ const Sura = () => {
                                         handlePlayPause(ayah.numberInSurah, audioAyah.audio);
                                     }
                                 }}
-                                className="ml-4 bg-[#15B3B6] text-white px-2 py-1 text-xs rounded hover:bg-pink-400 items-center"
+                                className="ml-4 bg-[#15B3B6] text-white px-4 py-2 rounded hover:bg-pink-400 items-center"
                             >
                                 {playingAyahNumber === ayah.numberInSurah ? <FaPause />
                                     : <FaPlay />

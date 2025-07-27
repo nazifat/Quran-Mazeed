@@ -101,9 +101,9 @@ const Sura = () => {
         setPlayingAyahNumber(0);
     };
     const pauseAudio = () => {
-        setIsAutoPlaying(false);
-        audioRef.current?.pause();
-    };
+  setIsAutoPlaying(false);
+  audioRef.current?.pause();
+};
 
 
     // Cleanup audio on component unmount
@@ -177,7 +177,7 @@ const Sura = () => {
                                         handlePlayPause(ayah.numberInSurah, audioAyah.audio);
                                     }
                                 }}
-                                className="ml-4 bg-[#15B3B6] text-white px-2 py-1 text-xs rounded hover:bg-pink-400 items-center"
+                                className="ml-4 bg-[#15B3B6] text-white px-4 py-2 rounded hover:bg-pink-400 items-center"
                             >
                                 {playingAyahNumber === ayah.numberInSurah ? <FaPause />
                                     : <FaPlay />

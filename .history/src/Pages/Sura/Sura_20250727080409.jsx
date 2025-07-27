@@ -20,8 +20,7 @@ const Sura = () => {
     const suraAudio = useSurahAudio(suraNumber);
     // State to track which ayah's audio is currently playing
     const [playingAyahNumber, setPlayingAyahNumber] = useState(null);
-    const [playingIndex, setPlayingIndex] = useState(null);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+
     // Single audio instance to control playback
     const audioRef = useRef(null);
 
@@ -96,15 +95,6 @@ const Sura = () => {
         }
     };
 
-    const startAutoPlay = () => {
-        setIsAutoPlaying(true);
-        setPlayingAyahNumber(0);
-    };
-    const pauseAudio = () => {
-        setIsAutoPlaying(false);
-        audioRef.current?.pause();
-    };
-
 
     // Cleanup audio on component unmount
     useEffect(() => {
@@ -115,7 +105,6 @@ const Sura = () => {
             }
         };
     }, []);
-
 
     const handlePrevious = () => {
         if (page > 1)
@@ -165,9 +154,20 @@ const Sura = () => {
             }
 
             <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto md:px-5 px-1'>{cleanedAyahs.map(ayah => (
-
                 <div className='' key={ayah.numberInSurah}>
-                    <div className='flex justify-between items-center'>
+                    <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-100 mb-4 md:py-5 py-0">
+                        <span className="block font-hafs text-2xl text-right leading-[2]">
+                            {ayah.text}
+
+
+                            <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
+                                {ayah.numberInSurah}
+                            </span>
+
+
+
+                        </span>
+
                         {/* Play / Pause Button */}
                         {suraAudio.length > 0 && (
                             <button
@@ -177,7 +177,7 @@ const Sura = () => {
                                         handlePlayPause(ayah.numberInSurah, audioAyah.audio);
                                     }
                                 }}
-                                className="ml-4 bg-[#15B3B6] text-white px-2 py-1 text-xs rounded hover:bg-pink-400 items-center"
+                                className="ml-4 bg-[#15B3B6] text-white px-4 py-2 rounded hover:bg-pink-400 flex items-center"
                             >
                                 {playingAyahNumber === ayah.numberInSurah ? <FaPause />
                                     : <FaPlay />
@@ -185,23 +185,8 @@ const Sura = () => {
                             </button>
 
                         )}
-                        <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-100 mb-4 md:py-5 py-0">
-                            <span className="block font-hafs text-2xl text-right leading-[2]">
-                                {ayah.text}
 
-
-                                <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
-                                    {ayah.numberInSurah}
-                                </span>
-
-
-
-                            </span>
-
-
-
-                        </p>
-                    </div>
+                    </p>
 
 
                     <div>
