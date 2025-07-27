@@ -69,7 +69,7 @@ const Donate = () => {
         </p>
 
        
-        <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300 flex gap-2 items-center justify-center">
+        <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300 flex gap-2">
           You Can Donate via bKash: <strong>+8801731797802</strong>
         <CopyButton textToCopy="+8801731797802"></CopyButton>
 

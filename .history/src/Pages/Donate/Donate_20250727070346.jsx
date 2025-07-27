@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GiPalmTree } from "react-icons/gi";
-import CopyButton from "../../Components/CopyButton/CoppyButton";
+
 const Donate = () => {
   const [amount, setAmount] = useState("");
   const [customAmount, setCustomAmount] = useState("");
@@ -56,8 +56,8 @@ const Donate = () => {
   return (
     <div className="py-10 bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4 transition-colors duration-300">
       <div className="max-w-xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-        <div className="flex items-center justify-center text-center md:mb-4 ">
-          <h2 className="text-2xl font-bold text-[#15B3B6] flex items-center gap-2 dark:text-[#15B3B6] flex md:flex-row flex-col">
+        <div className="flex items-center justify-center text-center md:mb-4 md:flex-row flex-col">
+          <h2 className="text-2xl font-bold text-[#15B3B6] flex items-center gap-2 dark:text-[#15B3B6]">
             <GiPalmTree />
             Support Quran Reading
           </h2>
@@ -69,10 +69,8 @@ const Donate = () => {
         </p>
 
        
-        <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300 flex gap-2 items-center justify-center">
+        <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300">
           You Can Donate via bKash: <strong>+8801731797802</strong>
-        <CopyButton textToCopy="+8801731797802"></CopyButton>
-
         </p>
       </div>
     </div>

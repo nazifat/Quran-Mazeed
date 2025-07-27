@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GiPalmTree } from "react-icons/gi";
 import CopyButton from "../../Components/CopyButton/CoppyButton";
+
 const Donate = () => {
   const [amount, setAmount] = useState("");
   const [customAmount, setCustomAmount] = useState("");
@@ -69,11 +70,10 @@ const Donate = () => {
         </p>
 
        
-        <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300 flex gap-2 items-center justify-center">
+        <p className="text-center mt-4 text-sm text-gray-600 dark:text-gray-300">
           You Can Donate via bKash: <strong>+8801731797802</strong>
-        <CopyButton textToCopy="+8801731797802"></CopyButton>
-
         </p>
+        <CopyButton textToCopy={01731797802}></CopyButton>
       </div>
     </div>
   );

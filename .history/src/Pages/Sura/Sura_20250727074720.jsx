@@ -15,13 +15,8 @@ const Sura = () => {
     const [ayahsEnglish, setAyahsEnglish] = useState([]);
     const [suraDataBangla, setSuraDataBangla] = useState(null);
     const [ayahsBangla, setAyahsBangla] = useState([]);
-
-    const suraAudio = useSurahAudio(suraNumber);
-    // State to track which ayah's audio is currently playing
-    const [playingIndex, setPlayingIndex] = useState(null);
-
-    // Single audio instance to control playback
-    const audioRef = useRef(null);
+    
+    const suraAudio = useSurahAudio(suraNumbe);
 
     useEffect(() => {
         fetch(`https://api.alquran.cloud/v1/surah/${suraNumber}/ar`)
@@ -157,7 +152,7 @@ const Sura = () => {
                             </div>
                         )}
                     </div>
-                    <div>
+                      <div>
                         {ayahsBangla.filter(ayahBng => ayahBng.numberInSurah === ayah.numberInSurah).map(ayahBng =>
 
                             <div className='' key={ayahBng.numberInSurah}>

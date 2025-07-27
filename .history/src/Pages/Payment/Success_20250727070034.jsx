@@ -4,9 +4,9 @@ const Success = () => {
     <div className="text-center mt-20">
       <h2 className="text-green-600 text-2xl font-bold">🎉 Payment Successful!</h2>
       <p className="mt-4">Thank you for supporting Quran Reading.</p>
+    </div>
 
-      {/* copied form */}
-       <form className="space-y-6">
+     <form className="space-y-6">
           {/* Preset amounts */}
           <div className="flex justify-center gap-4">
             {[100, 250, 500].map((val) => (
@@ -62,9 +62,6 @@ const Success = () => {
           </button>
         </form>
 
-    </div>
-
-    
   );
 };
 export default Success;
