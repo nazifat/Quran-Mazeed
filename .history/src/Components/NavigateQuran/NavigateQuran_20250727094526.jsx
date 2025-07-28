@@ -4,12 +4,12 @@ import QuranSearchSideBar from '../QuranSearch/QuranSearchSideBar';
 
 const NavigateQuran = () => {
     return (
-        <div className="drawer drawer-end z-[10000000] overflow-hidden">
+        <div className="drawer drawer-end z-[10000000]">
             {/* Toggle checkbox */}
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
 
             {/* Page content (button etc.) */}
-            <div className="drawer-content z-[10000000]">
+            <div className="drawer-content">
                 <label
                     htmlFor="my-drawer-4"
                     className="btn btn-lg p-6 rounded-lg bg-[#42CDD0] text-[15px] dark:text-gray-100 border-0 hover:bg-[#35b6ba] shadow-md"
@@ -19,7 +19,7 @@ const NavigateQuran = () => {
             </div>
 
             {/* Drawer Sidebar */}
-            <div className="drawer-side z-[10000000]">
+            <div className="drawer-side">
                 <label
                     htmlFor="my-drawer-4"
                     className="drawer-overlay bg-black bg-opacity-30 backdrop-blur-sm"

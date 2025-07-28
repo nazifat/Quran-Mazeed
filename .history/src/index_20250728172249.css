@@ -18,39 +18,21 @@ body {
   color: black;
 }
 
-.arabic-text {
-  font-family: "KFGQ_HAFS", serif;
-  font-size: 28px;
-  direction: rtl;
-  text-align: right;
-  line-height: 2.4;
-  direction: rtl;
-  unicode-bidi: isolate;
-}
-
 @font-face {
   font-family: 'KFGQ_HAFS';
-  src: url('./assets/fonts/KFGQ_HAFS.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'KFGQ_HAFS_TAHA';
-  src: url('./assets/fonts/KFGQPC Uthman Taha Naskh Regular.ttf') format('truetype');
+  src: url('/assets/fonts/KFGQ_HAFS.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-.font-taha {
-  font-family: "KFGQ_HAFS_TAHA", serif;
+.arabic-text {
+  font-family: 'KFGQ_HAFS', serif;
   font-size: 28px;
-  direction: rtl;
-  text-align: right;
   line-height: 2.4;
   direction: rtl;
-  unicode-bidi: isolate;
+  unicode-bidi: isolate; /* or "plaintext" if needed */
+  text-align: right;
 }
-
 
 /* @font-face {
   font-family: "KFGQ_HAFS";

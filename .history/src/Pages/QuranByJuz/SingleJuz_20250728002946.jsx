@@ -107,8 +107,8 @@ const SingleJuz = () => {
                                 )}
 
 
-                                <div className="text-lg leading-relaxed text-gray-800 dark:text-gray-100 mb-4 md:py-5 py-0">
-                                    <span  dir="rtl" lang="ar" className="block font-taha text-2xl text-right leading-[2]">
+                                <p className="text-lg  px-2 leading-relaxed text-gray-800 dark:text-gray-100  mb-4 md:py-5 py-0 border-b">
+                                    <span className="block font-hafs text-2xl text-right leading-[2]">
                                         {ayahText}
 
 
@@ -121,7 +121,7 @@ const SingleJuz = () => {
                                     </span>
 
 
-                                </div>
+                                </p>
                             </div>
 
 

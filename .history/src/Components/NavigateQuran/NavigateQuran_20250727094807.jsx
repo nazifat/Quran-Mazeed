@@ -4,7 +4,7 @@ import QuranSearchSideBar from '../QuranSearch/QuranSearchSideBar';
 
 const NavigateQuran = () => {
     return (
-        <div className="drawer drawer-end z-[10000000] overflow-hidden">
+        <div className="drawer drawer-end z-[10000000]">
             {/* Toggle checkbox */}
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
 

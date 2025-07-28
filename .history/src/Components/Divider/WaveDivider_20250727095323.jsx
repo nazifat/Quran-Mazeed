@@ -4,7 +4,7 @@ const WaveDivider = ({ position = 'top', color = '#12D6DA' }) => {
     const isTop = position === 'top';
 
     return (
-        <div className={`wave-divider overflow-hidden hidden md:block ${isTop ? 'mt-[-1px]' : ''} relative z-0`}>
+        <div className={`wave-divider hidden md:block ${isTop ? 'mt-[-1px]' : ''} relative z-0`}>
             <svg
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"

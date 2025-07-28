@@ -22,7 +22,7 @@ const AboutUs = () => {
             <div className="max-w-6xl  w-full mx-auto flex flex-col md:flex-row items-center justify-center-safe ">
 
                 {/* Left Side - Image */}
-                <div className="md:w-1/2 w-full ">
+                <div className="md:w-1/2 w-full z-[-10] ">
                     <img
                         src="https://i.ibb.co/DDNZhWTk/6556145.webp"
                         alt="Quran Reading"
@@ -33,7 +33,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Right Side - Text */}
-                <div className=" text-center md:text-left md:w-1/2 w-full">
+                <div className=" text-center md:text-left md:w-1/2 w-full z-[-10] ">
 
                     <h2 className={`hidden-slide text-sm md:text-xl font-bold text-[#10D0D5] mb-4 ${isVisible ? 'animate-slide-in-right' : ''}`}
 
@@ -41,11 +41,11 @@ const AboutUs = () => {
 
                         About Us
                     </h2>
-                    <p className={`hidden-slide text-xl md:text-4xl font-bold text-gray-500 mb-4 leading-[1.5] ${isVisible ? 'animate-slide-in-right' : ''}`}>
+                    <p className={`hidden-slide text-xl md:text-4xl font-bold text-gray-500 mb-4 leading-[1.5] z-[-10] ${isVisible ? 'animate-slide-in-right' : ''}`}>
 
                         Connecting Hearts to the Quran, One Verse at a Time
                     </p>
-                    <p className={`hidden-slide text-gray-500 text-base leading-[2] ${isVisible ? 'animate-slide-in-right' : ''}`}>
+                    <p className={`hidden-slide text-gray-500 text-base leading-[2] z-[-1] ${isVisible ? 'animate-slide-in-right' : ''}`}>
 
                         This timeless teaching forms the heart of our mission.
                         The Quran Reading website is founded on the belief that

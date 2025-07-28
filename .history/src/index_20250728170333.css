@@ -34,30 +34,13 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'KFGQ_HAFS_TAHA';
-  src: url('./assets/fonts/KFGQPC Uthman Taha Naskh Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.font-taha {
-  font-family: "KFGQ_HAFS_TAHA", serif;
-  font-size: 28px;
-  direction: rtl;
-  text-align: right;
-  line-height: 2.4;
-  direction: rtl;
-  unicode-bidi: isolate;
-}
-
-
-/* @font-face {
   font-family: "KFGQ_HAFS";
-  src: url("./assets/fonts/KFGQPC Uthmanic Script HAFS Regular.otf") format("opentype");
+  src: url("./assets/fonts/Hafs-font.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 /* .inter-custom {
     font-family: "Inter", sans-serif;

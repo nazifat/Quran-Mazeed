@@ -94,7 +94,7 @@ const SearchedPage = () => {
                             {
 
                                 suraNumber !== 1 && suraNumber !== 9 && (
-                                    <p className="text-center md:text-4xl text-2xl font-taha my-4 text-[#2FD6D9] md:py-5 ">
+                                    <p className="text-center md:text-4xl text-2xl font-hafs my-4 text-[#2FD6D9] md:py-5 ">
                                         ﷽
                                     </p>
                                 )
