@@ -19,7 +19,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li><NavLink to="/quran">Quran</NavLink></li>
         {/* <li><NavLink to="/tazweed">Tazweed</NavLink></li> */}
         {/* <NavLink> <NavigateQuran></NavigateQuran> </NavLink> */}
-
+        
         {/* <li>
 
             <button
@@ -45,13 +45,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         {navlinks}
                     </ul>
                 </div>
-                <Link to="/" className="flex items-center gap-2 text-[#0FD2D6] text-xl font-bold">
-                    <img
-                        src="https://i.ibb.co.com/4RXcJcRP/png-transparent-quran-icon-thumbnail-removebg-preview.png"
-                        alt="Quran Logo"
-                        className="w-8 h-8 md:w-10 md:h-10 object-contain"
-                    />
-                    <span className="hidden sm:inline-block">Quran Kareem</span>
+                <Link to="/" className="btn btn-ghost text-lg text-[#0FD2D6] ">
+                    Quran Mazeed
+                    <img src="https://i.ibb.co.com/4RXcJcRP/png-transparent-quran-icon-thumbnail-removebg-preview.png" alt="" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

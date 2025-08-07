@@ -51,7 +51,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                         alt="Quran Logo"
                         className="w-8 h-8 md:w-10 md:h-10 object-contain"
                     />
-                    <span className="hidden sm:inline-block">Quran Kareem</span>
+                    <span className="hidden sm:inline-block">Quran Mazeed</span>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

@@ -16,7 +16,7 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title">Quick Links</h6>
                     <Link className="link link-hover" to="/">Home</Link>
-                    {/* <Link className="link link-hover" to="/contact">Contact</Link> */}
+                    <Link className="link link-hover" to="/contact">Contact</Link>
                     <Link className="link link-hover" to="/quran">Read Quran</Link>
                 </nav>
                 <nav >

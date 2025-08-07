@@ -47,11 +47,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 </div>
                 <Link to="/" className="flex items-center gap-2 text-[#0FD2D6] text-xl font-bold">
                     <img
-                        src="https://i.ibb.co.com/4RXcJcRP/png-transparent-quran-icon-thumbnail-removebg-preview.png"
+                        src="https://i.ibb.co/4RXcJcR/png-transparent-quran-icon-thumbnail-removebg-preview.png"
                         alt="Quran Logo"
                         className="w-8 h-8 md:w-10 md:h-10 object-contain"
                     />
-                    <span className="hidden sm:inline-block">Quran Kareem</span>
+                    <span className="hidden sm:inline-block">Quran Mazeed</span>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">

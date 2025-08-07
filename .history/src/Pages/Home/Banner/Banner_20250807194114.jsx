@@ -11,7 +11,7 @@ import { IoBook } from "react-icons/io5";
 const Banner = () => {
     return (
         <div className='' >
-            <div className="hero min-h-screen bg-[#ECFBF9]  dark:bg-[#264653] " >
+            <div className="hero bg-[#ECFBF9]  dark:bg-[#264653] " >
                 <div className="hero-content flex-col lg:flex-row-reverse gap-8 w-full justify-center max-w-7xl px-4 sm:px-6 md:px-8">
 
                     {/* <div className=''>

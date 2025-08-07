@@ -7,7 +7,7 @@ import '../Banner/Banner.css'
 import { Link } from 'react-router-dom';
 import NavigateQuran from '../../../Components/NavigateQuran/NavigateQuran';
 import QuranSearch from '../../../Components/QuranSearch/QuranSearch';
-import { IoBook } from "react-icons/io5";
+
 const Banner = () => {
     return (
         <div className='' >
@@ -24,7 +24,7 @@ const Banner = () => {
 
                     <div className='space-y-4 text-center md:text-center max-w-xs lg:max-w-full'>
                         <div className='relative  overflow-hidden'>
-                            <div className='animate-slide-in-top '>
+                            <div className='animate-slide-in-left'>
                                 <span className='my-10  dark:text-gray-600 bg-[#fff] text-[#42CDD0] border rounded-full px-4 py-6 text-sm font-bold animate-slide-in-left' >
                                     Know Your Deen</span>
                             </div>
@@ -33,18 +33,16 @@ const Banner = () => {
                         <h1 className="text-3xl  md:text-4xl animate-slide-in-top font-bold text-[#2C366E] dark:text-gray-100">
 
                             The Best Platform to Read Quran Online</h1>
-
-                        <p className="text-gray-600 dark:text-gray-100 font-light md:animate-typing animate-slide-in-top
+                        <p className="text-gray-600 dark:text-gray-100 font-light animate-slide-in-left
                           text-sm sm:text-base overflow-hidden border-r-0">
                             And We have certainly made the Quran easy to remember.
                             So is there anyone who will be mindful? (54:40)
                         </p>
                         {/* <div className='relative  overflow-hidden md:flex-row flex flex-col items-center gap-5 '> */}
                         {/* <div className='animate-slide-in-left '> */}
-                        <CustomBtn2 className=" btn btn-block animate-slide-in-top" link='quran'> <IoBook></IoBook> Read Quran</CustomBtn2>
+                        <QuranSearch></QuranSearch>
 
-                        <QuranSearch className="animate-slide-in-top"></QuranSearch>
-
+                        <CustomBtn2 className="" link='quran'>Read Quran</CustomBtn2>
 
                         {/* </div> */}
                         {/* <NavigateQuran></NavigateQuran> */}
