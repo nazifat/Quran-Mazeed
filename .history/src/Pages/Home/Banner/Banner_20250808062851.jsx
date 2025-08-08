@@ -16,7 +16,7 @@ const Banner = () => {
                 className="
                     hero 
                     min-h-[60vh] sm:min-h-screen
-                    bg-gradient-to-b from-[#ECFBF9] via-[#D9F5F1] to-[#B5EAE3] 
+                    bg-gradient-to-b from-[#B5EAE3] via-[#D9F5F1] to-[#ECFBF9] 
                     dark:bg-gradient-to-b dark:from-[#264653] dark:via-[#1F3B42] dark:to-[#0F2027]
                 "
             >

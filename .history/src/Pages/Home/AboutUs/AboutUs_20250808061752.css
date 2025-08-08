@@ -1,0 +1,5 @@
+.dark .about-home,
+.dark .about-home p {
+    background-color: #1E1E1E; /* deep charcoal */
+    color: #F5F5F5; /* soft white */
+}

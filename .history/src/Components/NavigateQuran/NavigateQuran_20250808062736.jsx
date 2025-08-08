@@ -13,7 +13,7 @@ const NavigateQuran = () => {
             <div className="drawer-content z-[10000000]">
                 <label
                     htmlFor="my-drawer-4"
-                    className= " text-white btn btn-lg p-6 rounded-lg bg-[#42CDD0] text-[15px] dark:text-gray-100 border-0 hover:bg-[#35b6ba] shadow-md"
+                    className="btn btn-lg p-6 rounded-lg bg-[#42CDD0] text-[15px] dark:text-gray-100 border-0 hover:bg-[#35b6ba] shadow-md"
                 >
                    <IoNavigate /> Navigate Quran 
                 </label>

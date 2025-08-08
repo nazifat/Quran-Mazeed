@@ -1,0 +1,5 @@
+.dark .about-home,
+.dark .about-home p {
+    background: linear-gradient(180deg, #1e2a2f 0%, #0f2027 100%);
+    color: #f0f4f5; /* softer white to avoid harshness */
+}

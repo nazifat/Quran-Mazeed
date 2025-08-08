@@ -56,7 +56,7 @@ const Banner = () => {
 
 
                             <div>
-                                <NavigateQuran> </NavigateQuran>
+                                <NavigateQuran> <CiSearch /></NavigateQuran>
                             </div>
                         </div>
 

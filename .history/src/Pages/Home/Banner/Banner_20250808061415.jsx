@@ -8,18 +8,10 @@ import { Link } from 'react-router-dom';
 import NavigateQuran from '../../../Components/NavigateQuran/NavigateQuran';
 import QuranSearch from '../../../Components/QuranSearch/QuranSearch';
 import { IoBook } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
 const Banner = () => {
     return (
         <div className='' >
-            <div
-                className="
-                    hero 
-                    min-h-[60vh] sm:min-h-screen
-                    bg-gradient-to-b from-[#ECFBF9] via-[#D9F5F1] to-[#B5EAE3] 
-                    dark:bg-gradient-to-b dark:from-[#264653] dark:via-[#1F3B42] dark:to-[#0F2027]
-                "
-            >
+            <div className="hero min-h-screen bg-gradient-to-b from-[#ECFBF9] via-[#D9F5F1] to-[#B5EAE3] dark:bg-[#264653]">
 
                 <div className="hero-content flex-col lg:flex-row-reverse gap-8 w-full justify-center max-w-7xl px-4 sm:px-6 md:px-8">
 
@@ -56,7 +48,7 @@ const Banner = () => {
 
 
                             <div>
-                                <NavigateQuran> </NavigateQuran>
+                                <NavigateQuran></NavigateQuran>
                             </div>
                         </div>
 

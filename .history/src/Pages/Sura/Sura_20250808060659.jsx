@@ -1,7 +1,7 @@
 import React, { use, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import QuranSearch from '../../Components/QuranSearch/QuranSearch';
-import useSurahAudio from '../../hooks/useSurahAudio';
+import useSurahAudio from '../../hooks/useSurahAudio/useSurahAudio';
 import { FaPause, FaPlay } from "react-icons/fa";
 
 const Sura = () => {

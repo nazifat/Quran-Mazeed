@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import NavigateQuran from '../../../Components/NavigateQuran/NavigateQuran';
 import QuranSearch from '../../../Components/QuranSearch/QuranSearch';
 import { IoBook } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
 const Banner = () => {
     return (
         <div className='' >
@@ -56,7 +55,7 @@ const Banner = () => {
 
 
                             <div>
-                                <NavigateQuran> </NavigateQuran>
+                                <NavigateQuran></NavigateQuran>
                             </div>
                         </div>
 
