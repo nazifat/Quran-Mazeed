@@ -89,7 +89,7 @@ const SearchedPage = () => {
             <h2 className='py-2 text-black dark:text-white'>Page No: {pageNum}</h2>
             {
                 ayahs.map(ayah => <div key={ayah.number}>
-                    {ayah.numberInSurah === 1 && (
+                    { (
                         <div className="my-6 text-center">
                             <h2 className="text-xl md:text-2xl font-bold text-[#4F888B] border shadow-sm md:w-1/2 w-full mx-auto p-4">
                                 Surah  {ayah.surah?.englishName}

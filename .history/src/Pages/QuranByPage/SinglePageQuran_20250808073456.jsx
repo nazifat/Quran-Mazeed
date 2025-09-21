@@ -92,16 +92,19 @@ const SinglePageQuran = () => {
                                         ﷽
                                     </p>
                                 )}
+                                <div>
+                                    <span className="inline font-taha text-2xl leading-[2]">
+                                        {ayah.text}
+                                        <span
+                                            className="inline-block mx-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-full text-sm font-bold border border-[#4F888B] shadow-sm font-[Scheherazade] align-middle"
+                                            style={{ verticalAlign: 'middle' }}
+                                        >
+                                            {ayah.numberInSurah}
+                                        </span>{' '}
+                                    </span>
+                                </div>
 
-                                <span className="inline font-taha text-2xl leading-[2]">
-                                    {ayah.text}
-                                    <span
-                                        className="inline-block mx-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-full text-sm font-bold border border-[#4F888B] shadow-sm font-[Scheherazade] align-middle"
-                                        style={{ verticalAlign: 'middle' }}
-                                    >
-                                        {ayah.numberInSurah}
-                                    </span>{' '}
-                                </span>
+
                             </React.Fragment>
                         );
                     })}

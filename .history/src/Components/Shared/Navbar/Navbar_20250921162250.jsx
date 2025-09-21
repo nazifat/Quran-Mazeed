@@ -68,7 +68,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     {darkMode ? <MdOutlineLightMode /> : <MdDarkMode className='text-gray-100' />}
                 </button>
 
-                <CustomBtn text="Contribute" url="/contribute">
+                <CustomBtn text="Contribute" url="/donate">
                     <CiHeart size={24} />
 
                 </CustomBtn>

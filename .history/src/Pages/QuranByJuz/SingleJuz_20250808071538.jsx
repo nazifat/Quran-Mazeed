@@ -87,7 +87,7 @@ const SingleJuz = () => {
                                 .map((ayah) => (
                                     <span
                                         key={ayah.number}
-                                        className="font-taha text-2xl leading-[2] inline text-gray-800 dark:text-gray-200"
+                                        className="font-taha text-2xl leading-[2] inline text-gray-800 dark:text-gray-100"
                                         style={{ whiteSpace: 'normal' }}
                                     >
                                         {ayah.text}

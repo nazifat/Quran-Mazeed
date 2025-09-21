@@ -19,7 +19,6 @@ const SinglePageQuran = () => {
                 setPageData(data.data);
                 const fetchedAyahs = data.data.ayahs;
 
-                // Collect unique surahs on this page for headings
                 const surahsOnPage = {};
                 fetchedAyahs.forEach(ayah => {
                     if (!surahsOnPage[ayah.surah.number]) {
@@ -28,8 +27,8 @@ const SinglePageQuran = () => {
                 });
                 setSurahs(surahsOnPage);
 
-                // Remove Basmala text from ayahs — we'll add it manually before first ayah
                 const cleanedAyahs = fetchedAyahs.map(ayah => {
+                    // Remove Basmala text from ayahs, we will add it manually after surah title
                     if (ayah.text.startsWith('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ')) {
                         return {
                             ...ayah,
@@ -57,36 +56,32 @@ const SinglePageQuran = () => {
         <div>
             <QuranSearch />
 
-            <div className="grid grid-cols-1 text-right w-full md:w-3/4 mx-auto md:px-5 px-1">
-                <p className="text-black dark:text-white mb-4">Page No: {currentPage}</p>
+            <div className='grid grid-cols-1 text-right w-full md:w-3/4 mx-auto md:px-5 px-1'>
+                <p className='text-black dark:text-white mb-4'>Page No: {currentPage}</p>
 
-                <div
-                    dir="rtl"
-                    lang="ar"
-                    className="text-lg text-gray-800 dark:text-gray-100  bg-white dark:bg-[#1a1a1a]"
-                    style={{ textAlign: 'right' }}
-                >
+                <div dir="rtl" lang="ar" className="text-lg text-gray-800 dark:text-gray-100" style={{ textAlign: 'right' }}>
                     {ayahs.map((ayah) => {
                         const currentSurahNum = ayah.surah.number;
-                        const isNewSurah = currentSurahNum !== prevSurahNumber;
-                        const isFirstAyahOfSurah = ayah.numberInSurah === 1;
-                        prevSurahNumber = currentSurahNum;
+                        const showSurahName = currentSurahNum !== prevSurahNumber;
+                        const showBasmala = showSurahName && currentSurahNum !== 9; // no basmala for Surah 9
+
+                        if (showSurahName) prevSurahNumber = currentSurahNum;
 
                         return (
                             <React.Fragment key={ayah.number}>
                                 {isNewSurah && surahs[currentSurahNum] && (
                                     <h2
-                                        className="py-5 mb-5 bg-pink-200 text-xl md:text-2xl font-bold text-[#4F888B] border text-center md:w-1/2 mx-auto w-1/2 shadow-sm md:w-1/4 w-full mx-auto p-4"
+                                        className="py-5 bg-pink-200 text-xl md:text-2xl font-bold text-[#4F888B] border text-center md:w-1/2 mx-auto w-1/2 shadow-sm md:w-1/4 w-full mx-auto p-4"
                                         dir="ltr"
                                     >
                                         {surahs[currentSurahNum].englishName}
                                     </h2>
                                 )}
 
-                                {/* Basmala before first ayah only, except Surah 9 */}
+                                {/* Show basmala ONLY before first ayah of Surah, and only if Surah is NOT 9 */}
                                 {isFirstAyahOfSurah && currentSurahNum !== 9 && (
                                     <p
-                                        className="text-center md:text-4xl text-2xl font-hafs my-4 text-[#2FD6D9] md:py-5 border-2 border-gray-400 rounded-xl p-6 shadow-md"
+                                        className="text-center md:text-4xl text-2xl font-hafs my-4 text-[#2FD6D9] md:py-5"
                                         dir="ltr"
                                     >
                                         ﷽
@@ -108,23 +103,15 @@ const SinglePageQuran = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center gap-5 md:gap-10 items-center my-5">
-                <button
-                    className="btn md:btn-md btn-xs previous-btn"
-                    onClick={handlePrevious}
-                    disabled={currentPage === 1}
-                >
-                    Previous
+            <div className='flex justify-center gap-5 md:gap-10 items-center my-5'>
+                <button className='btn md:btn-md btn-xs previous-btn' onClick={handlePrevious} disabled={currentPage === 1}>
+                    Previous Page
                 </button>
                 <span className="font-medium text-gray-700 text-sm md:text-base text-center">
                     Page {currentPage} of {totalPages}
                 </span>
-                <button
-                    className="btn md:btn-md btn-xs next-btn"
-                    onClick={handleNext}
-                    disabled={currentPage === totalPages}
-                >
-                    Next
+                <button className='btn md:btn-md btn-xs next-btn' onClick={handleNext} disabled={currentPage === totalPages}>
+                    Next Page
                 </button>
             </div>
 

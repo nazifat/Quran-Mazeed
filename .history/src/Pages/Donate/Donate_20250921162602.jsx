@@ -54,7 +54,7 @@ const Donate = () => {
   };
 
   return (
-    <div className="py-10 min-h-[500px] sm:min-h-xl bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4 transition-colors duration-300">
+    <div className="py-10 min-h-[700px] bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4 transition-colors duration-300">
       <div className="max-w-xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
         <div className="flex items-center justify-center text-center md:mb-4 ">
           <h2 className="text-2xl font-bold text-[#15B3B6] flex items-center gap-2 dark:text-[#15B3B6] flex md:flex-row flex-col">

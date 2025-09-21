@@ -3,7 +3,6 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import NavigateQuran from '../../Components/NavigateQuran/NavigateQuran';
 import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 import useSurahTranslation from '../../hooks/useSurahTranslation';
-import useSurahAudio from '../../hooks/useSurahAudio';
 
 const SearchedPage = () => {
     const { pageNum } = useParams();
@@ -13,8 +12,7 @@ const SearchedPage = () => {
     const ayahRefs = useRef({});
     const page = parseInt(pageNum);
     const [suraNumber, setSuraNumber] = useState(null);
-    const { translationDataEng, ayahs: ayahsEnglish } = useSurahTranslation(suraNumber, 'en.sahih');
-    const { translationDataBengali, ayahs: ayahsBangla } = useSurahTranslation(suraNumber, 'bn.bengali');
+    const {translationData, ayahsEnglish: translatedAyahs } = useSurahTranslation(suraNumber, 'en.sahih');
     const [ayahs, setAyahs] = useState([]);
 
     useEffect(() => {
@@ -106,49 +104,34 @@ const SearchedPage = () => {
 
                         </div>
                     )}
-                    <div className='border-b'>
-                        <p
 
-                            ref={(el) => (ayahRefs.current[ayah.number] = el)}
-                            className={`py-3 px-2 ${highlightAyah == ayah.number ? 'dark:bg-gray-400 bg-pink-200' : ""}`}
-                        >
-                            <span className="block font-hafs  text-2xl text-right leading-[2] py-2 dark:text-white text-black" >
+                    <p
 
-                                {ayah.text}
-                                <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
-                                    {ayah.numberInSurah}
-                                </span>
+                        ref={(el) => (ayahRefs.current[ayah.number] = el)}
+                        className={`py-3 ${highlightAyah == ayah.number ? 'bg-gray-400' : ""}`}
+                    >
+                        <span className="block font-hafs  text-2xl text-right leading-[2] border-b py-2 dark:text-white text-black" >
 
-
+                            {ayah.text}
+                            <span className="mx-2 mt-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-[100%] text-sm font-bold  border border-[#4F888B] shadow-sm font-[Scheherazade]">
+                                {ayah.numberInSurah}
                             </span>
-                            {ayahsEnglish.filter(ayahEng => ayahEng.numberInSurah === ayah.numberInSurah).map(ayahEng =>
-
-                                <div className='' key={ayahEng.numberInSurah}>
-                                    <p className='text-left font-nunito leading-[1.75] dark:text-gray-100 ' >
-
-                                        {ayahEng.text}
-
-                                    </p>
 
 
-                                </div>
-                            )}
-                            {ayahsBangla.filter(ayahBn => ayahBn.numberInSurah === ayah.numberInSurah).map(ayahBn =>
+                        </span>
+                           {ayahsEnglish.filter(ayahEng => ayahEng.numberInSurah === ayah.numberInSurah).map(ayahEng =>
 
-                                <div className='' key={ayahBn.numberInSurah}>
-                                    <p className='text-left font-nunito leading-[1.75] dark:text-gray-100 ' >
+                            <div className='' key={ayahEng.numberInSurah}>
+                                <p className='text-left font-nunito leading-[1.75] dark:text-gray-100 ' >
 
-                                        {ayahBn.text}
+                                    {ayahEng.text}
 
-                                    </p>
-
-
-                                </div>
-                            )}
-                        </p>
-                    </div>
+                                </p>
 
 
+                            </div>
+                        )}
+                    </p>
                 </div>
                 )
             }

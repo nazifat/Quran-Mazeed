@@ -3,7 +3,6 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import NavigateQuran from '../../Components/NavigateQuran/NavigateQuran';
 import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 import useSurahTranslation from '../../hooks/useSurahTranslation';
-import useSurahAudio from '../../hooks/useSurahAudio';
 
 const SearchedPage = () => {
     const { pageNum } = useParams();
