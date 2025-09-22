@@ -4,7 +4,6 @@ import NavigateQuran from '../../Components/NavigateQuran/NavigateQuran';
 import QuranSearch from '../../Components/QuranSearch/QuranSearch';
 import useSurahTranslation from '../../hooks/useSurahTranslation';
 import useSurahAudio from '../../hooks/useSurahAudio';
-import { FaPause, FaPlay } from "react-icons/fa";
 
 const SearchedPage = () => {
     const { pageNum } = useParams();
@@ -24,8 +23,6 @@ const SearchedPage = () => {
     const audioRef = useRef(null);
 
     useEffect(() => {
-        stopAudio();
-
         fetch(`https://api.alquran.cloud/v1/page/${pageNum}/quran-uthmani`)
             .then(res => res.json())
             .then(data => {
@@ -100,17 +97,10 @@ const SearchedPage = () => {
             }
         };
     }, []);
-    const stopAudio = () => {
-        if (audioRef.current) {
-            audioRef.current.pause();
-            audioRef.current = null;
-            setPlayingAyahNumber(null);
-        }
-    };
+
 
     const handlePrev = () => {
         if (page > 1) {
-            stopAudio();
             navigate(`/quran/page/${page - 1}`);
         }
 
@@ -119,7 +109,6 @@ const SearchedPage = () => {
 
     const handleNext = () => {
         if (page < 604) {
-            stopAudio();
             navigate(`/quran/page/${page + 1}`);
         }
 
@@ -153,7 +142,7 @@ const SearchedPage = () => {
                         <p
 
                             ref={(el) => (ayahRefs.current[ayah.number] = el)}
-                            className={`py-3 px-2 ${highlightAyah == ayah.number ? 'dark:bg-gray-500 bg-pink-200' : ""}`}
+                            className={`py-3 px-2 ${highlightAyah == ayah.number ? 'dark:bg-gray-400 bg-pink-200' : ""}`}
                         >
                             {/* Play / Pause Button */}
                             {suraAudio.length > 0 && (

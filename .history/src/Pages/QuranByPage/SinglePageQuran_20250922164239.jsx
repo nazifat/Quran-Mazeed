@@ -63,7 +63,7 @@ const SinglePageQuran = () => {
                 <div
                     dir="rtl"
                     lang="ar"
-                    className="text-lg text-gray-800 dark:text-gray-100 bg-white dark:bg-[#1a1a1a] px-4 sm:px-0"
+                    className="text-lg text-gray-800 dark:text-gray-100  bg-white dark:bg-[#1a1a1a]"
                     style={{ textAlign: 'right' }}
                 >
                     {ayahs.map((ayah) => {
@@ -96,7 +96,7 @@ const SinglePageQuran = () => {
                                 <span className="inline font-taha text-2xl leading-[2]">
                                     {ayah.text}
                                     <span
-                                        className="inline-block mx-2 px-3 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-full text-sm font-bold border border-[#4F888B] shadow-sm font-[Scheherazade] align-middle"
+                                        className="inline-block mx-2 px-4 py-1 bg-[#AEE6F5] text-[#4F888B] rounded-full text-sm font-bold border border-[#4F888B] shadow-sm font-[Scheherazade] align-middle"
                                         style={{ verticalAlign: 'middle' }}
                                     >
                                         {ayah.numberInSurah}

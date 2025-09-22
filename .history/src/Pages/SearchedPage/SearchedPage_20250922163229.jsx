@@ -24,8 +24,6 @@ const SearchedPage = () => {
     const audioRef = useRef(null);
 
     useEffect(() => {
-        stopAudio();
-
         fetch(`https://api.alquran.cloud/v1/page/${pageNum}/quran-uthmani`)
             .then(res => res.json())
             .then(data => {
@@ -153,7 +151,7 @@ const SearchedPage = () => {
                         <p
 
                             ref={(el) => (ayahRefs.current[ayah.number] = el)}
-                            className={`py-3 px-2 ${highlightAyah == ayah.number ? 'dark:bg-gray-500 bg-pink-200' : ""}`}
+                            className={`py-3 px-2 ${highlightAyah == ayah.number ? 'dark:bg-gray-400 bg-pink-200' : ""}`}
                         >
                             {/* Play / Pause Button */}
                             {suraAudio.length > 0 && (

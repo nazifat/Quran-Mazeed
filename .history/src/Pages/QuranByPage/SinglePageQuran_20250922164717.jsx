@@ -63,7 +63,7 @@ const SinglePageQuran = () => {
                 <div
                     dir="rtl"
                     lang="ar"
-                    className="text-lg text-gray-800 dark:text-gray-100 bg-white dark:bg-[#1a1a1a] px-4 sm:px-0"
+                    className="text-lg text-gray-800 dark:text-gray-100 bg-white dark:bg-[#1a1a1a] px-4"
                     style={{ textAlign: 'right' }}
                 >
                     {ayahs.map((ayah) => {

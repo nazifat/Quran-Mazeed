@@ -6,7 +6,7 @@ const CustomBtn = ({ text, children, url }) => {
         <Link to={url} className="btn btn-outline custom-btn border rounded-full">
 
             {children}
-            <span className='font-semibold'>{text}</span>
+            <span className=''>{text}</span>
 
         </Link>
 
